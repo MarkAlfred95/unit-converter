@@ -1,0 +1,298 @@
+.calculator_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); */
+}
+.calculator_container{
+    padding: 3rem 0;
+    width: 75%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.calc_link{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.calculator_container h1{
+    color: white;
+    width: 100%;
+    font-size: 3em;
+    margin: 0.5rem 0;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: center;
+}
+.calc_items_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.calc_item_container{
+    width: 10rem;
+    height: 12rem;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translateX(0) translateY(0);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out;
+}
+.calc_item_container:hover{
+    -webkit-box-shadow: 
+        1px 1px var(--dark-color-b), 
+        2px 2px var(--dark-color-b), 
+        3px 3px var(--dark-color-b), 
+        4px 4px var(--dark-color-b), 
+        5px 5px var(--dark-color-b), 
+        6px 6px var(--dark-color-b), 
+        7px 7px var(--dark-color-b), 
+        8px 8px var(--dark-color-b);
+    
+    box-shadow: 
+        1px 1px var(--dark-color-b), 
+        2px 2px var(--dark-color-b), 
+        3px 3px var(--dark-color-b), 
+        4px 4px var(--dark-color-b), 
+        5px 5px var(--dark-color-b), 
+        6px 6px var(--dark-color-b), 
+        7px 7px var(--dark-color-b), 
+        8px 8px var(--dark-color-b);
+
+    -webkit-transform: translateX(-8px) translateY(-8px);
+    transform: translateX(-8px) translateY(-8px);
+}
+.calc_item_container:hover::after {
+    -webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.calc_item_image{
+    width: 5rem;
+    height: 5rem;
+    background: var(--light-color);
+}
+.calc_item_name{
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.calc_item_name span{
+    width: 100%;
+}
+
+.calculator_nav{
+    margin: 1rem 0 3rem 0;
+    width: 24rem;
+    height: 3.5rem;
+    border: 3px solid white;
+    border-radius: 10px;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.calculator_nav_items{
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+.calculator_nav_items:nth-child(1){
+    width: 20%;
+}
+.calc_nav_active{
+    height: 100%;
+    background: white;
+    color: var(--primary-color);
+}
+
+@-webkit-keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b);
+        box-shadow: 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b),
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b);
+        
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-box-shadow: 
+            1px 1px var(--dark-color-b), 
+            2px 2px var(--dark-color-b), 
+            3px 3px var(--dark-color-b), 
+            4px 4px var(--dark-color-b), 
+            5px 5px var(--dark-color-b), 
+            6px 6px var(--dark-color-b), 
+            7px 7px var(--dark-color-b), 
+            8px 8px var(--dark-color-b);
+
+        box-shadow: 
+            1px 1px var(--dark-color-b), 
+            2px 2px var(--dark-color-b), 
+            3px 3px var(--dark-color-b), 
+            4px 4px var(--dark-color-b), 
+            5px 5px var(--dark-color-b), 
+            6px 6px var(--dark-color-b), 
+            7px 7px var(--dark-color-b), 
+            8px 8px var(--dark-color-b);
+
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
+}
+
+@keyframes shadow-pop-br {
+    0% {
+        -webkit-box-shadow: 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b);
+        box-shadow: 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b), 
+            0 0 var(--dark-color-b);
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        -webkit-box-shadow: 
+            1px 1px var(--dark-color-b), 
+            2px 2px var(--dark-color-b), 
+            3px 3px var(--dark-color-b), 
+            4px 4px var(--dark-color-b), 
+            5px 5px var(--dark-color-b), 
+            6px 6px var(--dark-color-b), 
+            7px 7px var(--dark-color-b), 
+            8px 8px var(--dark-color-b);
+        box-shadow: 
+            1px 1px var(--dark-color-b), 
+            2px 2px var(--dark-color-b), 
+            3px 3px var(--dark-color-b), 
+            4px 4px var(--dark-color-b), 
+            5px 5px var(--dark-color-b), 
+            6px 6px var(--dark-color-b), 
+            7px 7px var(--dark-color-b), 
+            8px 8px var(--dark-color-b);
+        -webkit-transform: translateX(-8px) translateY(-8px);
+        transform: translateX(-8px) translateY(-8px);
+    }
+}
+
+
+/* Area Calculator */
+.pages_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.pages_container{
+    /* margin-top: 4rem; */
+    /* margin: 2rem; */
+    width: 100%;
+}
+.pages_description_wrap{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.pages_container h1{
+    margin: 0 0 0.5rem 0;
+    color: var(--dark-color);
+}
+.pages_container p{
+    color: var(--dark-color);
+}
+
+.calc_categories_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+.calc_category_container{
+    padding: 1rem;
+    width: 49%;
+    /* height: 20rem; */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+.calc_category_title{
+    padding-bottom: 1rem;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.calc_category_content_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.shape_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.square{
+    width: 10rem;
+    height: 10rem;
+    /* background: var(--secondary-color); */
+    /* border: 5px solid var(--primary-color); */
+    border: 5px solid var(--dark-color);
+}
+.calculate_btn{
+    all: unset;
+    padding: 0.5rem 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    cursor: pointer;
+}

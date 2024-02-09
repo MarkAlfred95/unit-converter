@@ -1,0 +1,59 @@
+.calc_category_input_wrap{
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.calc_category_input_wrap input{
+    all: unset;
+    width: 12rem;
+    padding: 0.25rem;
+    border: 2px solid var(--dark-color);
+    text-align: right;
+    border-radius: 7px 0 0 7px;
+}
+.calc_category_input_wrap input::-webkit-inner-spin-button,
+.calc_category_input_wrap input::-webkit-outer-spin-button {
+    margin-left: 0.25rem;
+}
+.calc_category_label{
+    display: block;
+    width: calc(12.5rem + 2px);
+    font-weight: 600;
+}
+.calc_category_label-b{
+    display: block;
+    width: calc(9rem + 4px);
+    font-weight: 600;
+}
+.custom-select_wrap{
+    position: relative;
+}
+.custom-select_wrap select{
+    all: unset;
+    width: 8rem;
+    padding: 0.5rem 0.5rem;
+    border: 2px solid var(--dark-color);
+    border-left: none;
+    border-radius: 0 7px 7px 0;
+}
+.custom-arrow{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2rem;
+    pointer-events: none;
+}
+.custom-arrow::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid var(--dark-color);
+}
