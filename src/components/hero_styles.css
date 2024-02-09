@@ -1,0 +1,31 @@
+.home_wrap{
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background: var(--light-color); */
+}
+.home_container{
+    padding: 4rem 0;
+    width: 75%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.hero_description_wrap{
+    width: 50%;
+}
+.hero_image_wrap{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero_image{
+    width: 20rem;
+    height: 20rem;
+    background: var(--secondary-color);
+    display: grid;
+    place-content: center;
+}
