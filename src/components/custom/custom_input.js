@@ -1,11 +1,20 @@
-import { useState } from "react";
+// import { useState } from "react";
 import './custom_input_styles.css'
 
 
-const CustomInput = ({ label, unitOptions, onInputChange, onUnitChange }) => {
+const CustomInput = ({ 
+  label, 
+  unitOptions, 
+  onInputChange, 
+  onUnitChange,
+  value,
+  setValue,
+  unit,
+  setUnit
+}) => {
 
-    const [value, setValue] = useState('');
-    const [unit, setUnit] = useState(unitOptions[0]);
+    // const [value, setValue] = useState('');
+    // const [unit, setUnit] = useState(unitOptions[0]);
 
     const handleInputChange = (e) => {
         const newValue = e.target.value;
@@ -13,7 +22,7 @@ const CustomInput = ({ label, unitOptions, onInputChange, onUnitChange }) => {
         if (onInputChange) {
           onInputChange(newValue);
         }
-      };
+    };
     
     const handleUnitChange = (e) => {
         const newUnit = e.target.value;
@@ -31,7 +40,7 @@ const CustomInput = ({ label, unitOptions, onInputChange, onUnitChange }) => {
             <div className="custom-select_wrap">
                 <select value={unit} onChange={handleUnitChange}>
                     {unitOptions.map(option => (
-                      <option key={option.option} value={option.option}>{option.option_name}</option>
+                      <option key={option.option} value={option.option_name}>{option.option_name}</option>
                     ))}
                 </select>
                 <div className="custom-arrow"></div>

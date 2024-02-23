@@ -5,7 +5,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="app_title">Convert & Calculate</div>
+      <div className="app_title">CalcPlus</div>
       <ul>
         <NavLink to="/" className="nav_item_link">Home</NavLink>
         <NavLink to="about" className="nav_item_link">About</NavLink>

@@ -24,6 +24,11 @@
         invert(19%) sepia(18%) saturate(548%) 
         hue-rotate(171deg) brightness(92%) contrast(88%)
         drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.15));
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+.footer_logo_img:hover{
+    transform: scale(1.1);
 }
 .footer_text_wrap{
     width: 50%;
@@ -53,7 +58,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
 }
 .socials_link_footer:hover{
     transform: scale(1.1);

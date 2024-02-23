@@ -20,11 +20,11 @@
 }
 
 .calculator_container h1{
-    color: white;
+    color: var(--dark-color-b);
     width: 100%;
     font-size: 3em;
     margin: 0.5rem 0;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.15));
     display: flex;
     justify-content: center;
 }
@@ -40,7 +40,8 @@
     height: 12rem;
     background: white;
     border-radius: 0.5rem;
-    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
+    border: 3px solid var(--dark-color-b);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -97,7 +98,8 @@
     margin: 1rem 0 3rem 0;
     width: 24rem;
     height: 3.5rem;
-    border: 3px solid white;
+    background: var(--light-color);
+    border: 3px solid var(--dark-color-b);
     border-radius: 10px;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
     display: flex;
@@ -107,7 +109,7 @@
 .calculator_nav_items{
     width: 40%;
     height: 100%;
-    color: white;
+    color: var(--dark-color-b);
     font-size: 1.2em;
     display: flex;
     justify-content: center;
@@ -120,8 +122,8 @@
 }
 .calc_nav_active{
     height: 100%;
-    background: white;
-    color: var(--primary-color);
+    background: var(--dark-color-b);
+    color: white;
 }
 
 @-webkit-keyframes shadow-pop-br {
@@ -237,6 +239,7 @@
     margin-bottom: 1rem;
     padding: 1rem;
     width: 100%;
+    border: 3px solid var(--dark-color-b);
     border-radius: 0.5rem;
     background: white;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
@@ -252,14 +255,16 @@
 .calc_categories_wrap{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0 1rem;
     justify-content: space-between;
 }
 .calc_category_container{
+    margin-bottom: 1rem;
     padding: 1rem;
     width: 49%;
     /* height: 20rem; */
     background: white;
+    border: 3px solid var(--dark-color-b);
     border-radius: 10px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
 }
@@ -286,13 +291,91 @@
 .square{
     width: 10rem;
     height: 10rem;
-    /* background: var(--secondary-color); */
-    /* border: 5px solid var(--primary-color); */
     border: 5px solid var(--dark-color);
+}
+.circle{
+    width: 10rem;
+    height: 10rem;
+    border: 5px solid var(--dark-color);
+    border-radius: 50%;
+}
+.rectangle{
+    width: 15rem;
+    height: 10rem;
+    border: 5px solid var(--dark-color);
+}
+.parallelogram{
+    width: 13rem;
+    height: 10rem;
+    border: 5px solid var(--dark-color);
+    transform: skewX(-25deg);
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 7rem solid transparent;
+    border-right: 7rem solid transparent;
+    border-bottom: 10rem solid var(--dark-color);
+}
+.triangle_inside{
+    border-left: 7rem solid transparent;
+    border-right: 7rem solid transparent;
+    border-bottom: 10rem solid white;
+    transform: translate(-112px, 2px) scale(0.92);
+}
+.trapezoid{
+    border-bottom: 10rem solid var(--dark-color);
+	border-left: 4rem solid transparent;
+	border-right: 4rem solid transparent;
+	height: 0;
+	width: 17rem;
+}
+.trapezoid_inside{
+    border-bottom: 10rem solid white;
+	border-left: 4rem solid transparent;
+	border-right: 4rem solid transparent;
+    width: 17rem;
+    transform: translateX(-64px) scale(0.94);
+}
+.ellipse{
+    width: 15rem;
+    height: 10rem;
+    border: 5px solid var(--dark-color);
+    border-radius: 50%;
+}
+.sector {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100% 0 0 0;
+    border: 5px solid var(--dark-color);
+    transform: rotate(45deg) translate(-24px, -24px);
+}
+.input_wrap{
+    margin: 1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.calc_category_btns{
+    display: flex;
+    gap: 1rem;
 }
 .calculate_btn{
     all: unset;
     padding: 0.5rem 2rem;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background: var(--dark-color);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+.clear_btn{
+    all: unset;
+    padding: 0.5rem 2rem;
+    /* background: var(--dark-color); */
+    border: 3px solid var(--dark-color);
+    border-radius: 7px;
+    color: var(--dark-color);
+    font-weight: 600;
     cursor: pointer;
 }

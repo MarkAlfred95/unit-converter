@@ -9,7 +9,7 @@ import {
 // pages
 import Home from './pages/Home';
 import About from './pages/About';
-import AreaCalculator from './pages/calculator/area_calculator';
+import AreaCalculator from './pages/calculator/area_calculator/area_calculator';
 
 // layouts
 import RootLayout from './layouts/RootLayout';
@@ -30,12 +30,6 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-      // <BrowserRouter>
-      //   <Routes>
-      //     <Route index element={<Home />} />
-      //     <Route path="area-calculator" element={<AreaCalculator />} />
-      //   </Routes>
-      // </BrowserRouter>
       <RouterProvider router={router} />
   );
 }
