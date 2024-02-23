@@ -12,7 +12,11 @@ const Footer = () => {
     return(
         <footer className="footer_wrap">
             <div className="footer_container">
-                <div className="footer_logo_wrap"><img src={logo} alt="my_logo" className="footer_logo_img"></img></div>
+                <div 
+                    className="footer_logo_wrap"
+                    onClick={() => openLink("https://markalfredignacio.vercel.app/")}>
+                        <img src={logo} alt="my_logo" className="footer_logo_img" />
+                </div>
                 <div className="footer_text_wrap">
                     <span className="footer_text">© 2024 • Developed by</span>
                     <span className="footer_text">Mark Alfred Ignacio</span>

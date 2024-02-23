@@ -3,8 +3,13 @@
     min-height: calc(100vh - 11rem);
     display: flex;
     justify-content: space-around;
-    background: var(--secondary-color);
-    /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); */
+    /* background: var(--secondary-color); */
+    background-color: var(--light-color);
+    background-image:  
+        linear-gradient(var(--gray-color) 2px, transparent 2px), 
+        linear-gradient(to right, var(--gray-color) 2px, var(--light-color) 2px);
+    background-size: 5rem 5rem;
+    background-position: 2.5rem 2.5rem;
 }
 .calculator_sidebar{
     margin: 1rem 0;
@@ -13,6 +18,7 @@
     height: 34rem;
     /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); */
     background: white;
+    border: 3px solid var(--dark-color-b);
     border-radius: 10px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -93,7 +99,7 @@
     margin: 0 1rem 1rem 1rem;
     width: 17rem;
     height: 2.5rem;
-    border: 3px solid var(--dark-color);
+    border: 3px solid var(--dark-color-b);
     border-radius: 10px;
     /* filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25)); */
     display: flex;
@@ -103,7 +109,7 @@
 .calculator_nav_items-side{
     width: 40%;
     height: 100%;
-    color: var(--dark-color);
+    color: var(--dark-color-b);
     font-size: 0.9em;
     display: flex;
     justify-content: center;
@@ -116,6 +122,6 @@
 }
 .calc_nav_active-side{
     height: 100%;
-    background: var(--dark-color);
+    background: var(--dark-color-b);
     color: white;
 }

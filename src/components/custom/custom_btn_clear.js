@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
-const CustomBtnCalculate = ({calculate}) => {
+const CustomBtnClear = ({clear}) => {
   return (
     <motion.button
       whileHover={{scale: 1.05}} 
       whileTap={{scale: 0.95}}
-      className="calculate_btn" 
-      onClick={calculate}
+      className="clear_btn" 
+      onClick={clear}
     >
-      Calculate
+      Clear
     </motion.button>
   )
 }
 
-export default CustomBtnCalculate;
+export default CustomBtnClear;

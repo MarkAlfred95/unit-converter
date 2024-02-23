@@ -33,16 +33,16 @@ nav ul{
     border-bottom: 3px solid transparent;
 }
 .nav_item_link:hover{
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--dark-color-b);
 }
 .nav_link{
     padding: 0.25rem 0;
 }
 .nav_link:hover{
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--dark-color-b);
 }
 .nav_item_link.active{
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--dark-color-b);
 }
 .app_title{
     font-weight: 600;
