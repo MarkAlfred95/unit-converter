@@ -10,6 +10,7 @@ import {
 import Home from './pages/Home';
 import About from './pages/About';
 import AreaCalculator from './pages/calculator/area_calculator/area_calculator';
+import LengthConverter from './pages/converter/length_converter';
 
 // layouts
 import RootLayout from './layouts/RootLayout';
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="calculator" element={<CalculatorLayout />}>
         <Route path="area-calculator" element={<AreaCalculator />} />
+        <Route path="length-converter" element={<LengthConverter />} />
       </Route>
     </Route>
   )

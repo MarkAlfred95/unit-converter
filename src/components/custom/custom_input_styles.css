@@ -28,6 +28,7 @@
 }
 .custom-select_wrap{
     position: relative;
+    cursor: pointer;
 }
 .custom-select_wrap select{
     all: unset;
@@ -40,12 +41,12 @@
 .custom-arrow{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 2px;
     height: 100%;
-    width: 2rem;
+    width: 1.5rem;
     pointer-events: none;
 }
-.custom-arrow::before{
+/* .custom-arrow::before{
     content: '';
     position: absolute;
     width: 0;
@@ -56,7 +57,7 @@
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 7px solid var(--dark-color);
-}
+} */
 
 .result_wrap{
     position: fixed;
@@ -104,4 +105,82 @@
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.calculate_btn{
+    all: unset;
+    padding: 0.5rem 2rem;
+    background: var(--dark-color);
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+}
+.clear_btn{
+    all: unset;
+    padding: 0.5rem 2rem;
+    border: 3px solid var(--dark-color);
+    border-radius: 7px;
+    color: var(--dark-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* .selected_option{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.arrow_down_wrap{
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.units_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.unit_container{
+    all: unset;
+    width: 7rem;
+    height: 7rem;
+    border: 3px solid var(--dark-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    user-select: none;
+}
+.unit_symbol{
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    color: var(--dark-color);
+}
+.unit_name{
+    margin-top: -0.75rem;
+    width: 100%;
+    text-align: center;
+    color: var(--dark-color);
+}
+.unit_arrow-down{
+    filter: invert(9%) sepia(36%) saturate(580%) hue-rotate(156deg) brightness(94%) contrast(87%);
+}
+
+.options_list{
+    margin-top: 1rem;
+    background: white;
+    border: 3px solid var(--dark-color);
+    z-index: 5;
+}
+.options_list_items{
+    padding: 0 0.5rem;
+    background: white;
+    color: var(--dark-color);
+}
+.options_list_items:hover{
+    filter: brightness(90%);
 }
