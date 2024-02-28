@@ -1,0 +1,70 @@
+.converter_container{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: 3px solid var(--dark-color-b);
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.converter_line{
+    position: absolute;
+    /* top: 0; */
+    display: grid;
+    place-content: center;
+    /* left: var(50% - 2px); */
+    width: 3px;
+    background: var(--dark-color-b);
+    height: 100%;
+}
+.converter_wrap{
+    margin-top: 1rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.converter_wrap input{
+    all: unset;
+    margin: 3rem 0 1rem 0;
+    width: 80%;
+    padding: 1rem 0 0 0;
+    font-size: 2em;
+    text-align: right;
+    border: none;
+    border-bottom: 3px solid var(--dark-color);
+    /* border-radius: 0.5rem; */
+    color: var(--dark-color);
+}
+.converter_wrap input::-webkit-inner-spin-button,
+.converter_wrap input::-webkit-outer-spin-button {
+    /* margin-left: 0.25rem; */
+    display: none;
+}
+.convert_icon_wrap{
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    border: 3px solid var(--dark-color-b);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.convert_icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: invert(24%) sepia(32%) saturate(400%) hue-rotate(158deg) brightness(89%) contrast(96%);
+}
+
+.converter_btns_wrap{
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+}

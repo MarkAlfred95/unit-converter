@@ -1,5 +1,5 @@
-// import { useState } from "react";
 import './custom_input_styles.css'
+import arrow_down from "../../assets/expand_more.svg"
 
 
 const CustomInput = ({ 
@@ -43,7 +43,12 @@ const CustomInput = ({
                       <option key={option.option} value={option.option_name}>{option.option_name}</option>
                     ))}
                 </select>
-                <div className="custom-arrow"></div>
+                {/* <div className="custom-arrow"></div> */}
+                <img 
+                  className="custom-arrow"
+                  src={arrow_down}
+                  alt="select-unit"
+                />
             </div>
         </div>
     )
