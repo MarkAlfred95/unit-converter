@@ -40,6 +40,7 @@ const CustomSelect = ({
     };
 
     return (
+        <>
         <div className="unit_container">
             <div 
                 className="selected_option" 
@@ -58,20 +59,21 @@ const CustomSelect = ({
                     </div>
                 </div>
             </div>
-            {showOptions && (
-                <div className="options_list" ref={optionsRef}>
-                    {selectOptions.map(option => (
-                        <div 
-                            key={option.option}
-                            className="options_list_items" 
-                            onClick={() => handleOptionClick(option)}
-                        >
-                            {option.option_name}
-                        </div>
-                    ))}
-                </div>
-            )}
         </div>
+        {showOptions && (
+            <div className="options_list" ref={optionsRef}>
+                {selectOptions.map(option => (
+                    <div 
+                        key={option.option}
+                        className="options_list_items" 
+                        onClick={() => handleOptionClick(option)}
+                    >
+                        {option.option_name}
+                    </div>
+                ))}
+            </div>
+        )}
+        </>
     );
 };
 

@@ -144,34 +144,38 @@
 }
 .unit_container{
     all: unset;
+    position: relative;
     width: 7rem;
     height: 7rem;
     border: 3px solid var(--dark-color);
     border-radius: 0.5rem;
-    cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
     user-select: none;
 }
 .unit_symbol{
     width: 100%;
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     color: var(--dark-color);
 }
 .unit_name{
-    margin-top: -0.75rem;
+    /* margin-top: -0.5rem; */
     width: 100%;
     text-align: center;
     color: var(--dark-color);
+    line-height: 1em;
 }
 .unit_arrow-down{
     filter: invert(9%) sepia(36%) saturate(580%) hue-rotate(156deg) brightness(94%) contrast(87%);
 }
 
 .options_list{
-    margin-top: 1rem;
+    position: absolute;
+    margin-top: 8rem;
     background: white;
     border: 3px solid var(--dark-color);
     z-index: 5;
@@ -180,6 +184,7 @@
     padding: 0 0.5rem;
     background: white;
     color: var(--dark-color);
+    text-wrap: nowrap;
 }
 .options_list_items:hover{
     filter: brightness(90%);

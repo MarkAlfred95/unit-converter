@@ -22,7 +22,7 @@ const Calculators = () => {
     { icons: "sample", calc_name: "Length", link: "calculator/length-converter", type: "Converter"},
     { icons: "sample", calc_name: "Mass", link: "calculator/mass-converter", type: "Converter"},
     { icons: "sample", calc_name: "Speed", link: "calculator/speed-converter", type: "Converter"},
-    { icons: "sample", calc_name: "Temperature", link: "calculator/Temperature-converter", type: "Converter"},
+    { icons: "sample", calc_name: "Temperature", link: "calculator/temperature-converter", type: "Converter"},
     { icons: "sample", calc_name: "Time", link: "calculator/time-converter", type: "Converter"},
     { icons: "sample", calc_name: "Volume", link: "calculator/volume-converter", type: "Converter"}
   ]
