@@ -22,7 +22,7 @@ const CalculatorLayout = () => {
         { icons: "sample", calc_name: "Length", link: "length-converter", type: "Converter"},
         { icons: "sample", calc_name: "Mass", link: "mass-converter", type: "Converter"},
         { icons: "sample", calc_name: "Speed", link: "speed-converter", type: "Converter"},
-        { icons: "sample", calc_name: "Temperature", link: "Temperature-converter", type: "Converter"},
+        { icons: "sample", calc_name: "Temperature", link: "temperature-converter", type: "Converter"},
         { icons: "sample", calc_name: "Time", link: "time-converter", type: "Converter"},
         { icons: "sample", calc_name: "Volume", link: "volume-converter", type: "Converter"}
     ]
