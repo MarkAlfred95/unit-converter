@@ -361,20 +361,135 @@
     display: flex;
     gap: 1rem;
 }
-/* .calculate_btn{
-    all: unset;
-    padding: 0.5rem 2rem;
-    background: var(--dark-color);
-    border-radius: 7px;
-    color: white;
-    cursor: pointer;
+
+.calc_container{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: 3px solid var(--dark-color-b);
+    border-radius: 0.5rem;
+    background: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-.clear_btn{
-    all: unset;
-    padding: 0.5rem 2rem;
-    border: 3px solid var(--dark-color);
-    border-radius: 7px;
-    color: var(--dark-color);
+
+.date_picker_container{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.date_picker_wrap{
+    width: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.date_picker_label{
+    width: 100%;
     font-weight: 600;
-    cursor: pointer;
-} */
+}
+.input_date{
+    padding: 0.5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    font-family: 'Poppins';
+    font-size: 1em;
+}
+
+.age_calculation_container{
+    width: 23rem;
+    /* height: 20rem; */
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.age_wrap{
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    border-right: 1px solid var(--dark-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.next_birthday_wrap{
+    width: 50%;
+    height: 50%;
+    padding: 1rem;
+    border-left: 1px solid var(--dark-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.age_summary_wrap{
+    width: 100%;
+    height: 50%;
+    padding: 1rem;
+    border-top: 2px solid var(--dark-color);
+}
+.age_title_text{
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+.age_years_wrap{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.age_years_text{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--sky-blue);
+    font-size: 2em;
+    color: white;
+    display: grid;
+    place-content: center;
+}
+.age_years_subtext{
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+}
+.age_small_text{
+    font-size: 0.8em;
+}
+.age_medium_text{
+    font-size: 1.5em;
+}
+
+.age_summary_result_wrap{
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem;
+}
+.age_summary_result{
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+.age_nextBDay_text{
+    font-size: 2rem;
+    color: var(--sky-blue);
+}
+.cake_icon_wrap{
+    width: 3rem;
+    height: 3rem;
+    background: var(--sky-blue);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+.cake_icon{
+    width: 2rem;
+    height: 2rem;
+    filter: invert(99%) sepia(4%) saturate(580%) hue-rotate(174deg) brightness(117%) contrast(100%);
+}

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 
 import Navbar from '../components/navbar/Navbar'
-import Footer from '../components/footer.js'
+// import Footer from '../components/footer.js'
 
 
 const RootLayout = () => {
@@ -13,9 +13,9 @@ const RootLayout = () => {
         <main>
             <Outlet />
         </main>
-        <footer>
+        {/* <footer>
             <Footer />
-        </footer>
+        </footer> */}
     </div>
   )
 }

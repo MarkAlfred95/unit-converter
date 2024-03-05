@@ -1,5 +1,6 @@
 import Hero from '../components/hero/hero';
 import Calculators from './calculator/calculators';
+import Footer from '../components/footer'
 
 import './pages_styles.css';
 
@@ -21,6 +22,7 @@ const Home = () => {
                 </div>
                 <Calculators />
             </div>
+            <Footer />
         </>
     );
 };
