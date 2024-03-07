@@ -93,9 +93,9 @@ const AgeCalculator = () => {
                 <div className="pages_description_wrap">
                     <h1>Age Calculator</h1>
                     <p>
-                        A Time Converter is a practical tool used to convert time measurements 
-                        between various units of time. It enables users to efficiently convert durations 
-                        expressed in units such as seconds, minutes, hours, days, weeks and years.
+                        An Age Calculator is a convenient tool used to determine a person's age 
+                        based on their date of birth and the current date. It calculates the precise age 
+                        in years, months, and days, providing accurate results for any given date. 
                     </p>
                 </div>    
 

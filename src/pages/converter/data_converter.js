@@ -129,11 +129,11 @@ const DataConverter = () => {
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">
-                    <h1>Time Converter</h1>
+                    <h1>Data Converter</h1>
                     <p>
-                        A Time Converter is a practical tool used to convert time measurements 
-                        between various units of time. It enables users to efficiently convert durations 
-                        expressed in units such as seconds, minutes, hours, days, weeks and years.
+                        A Data Converter is a versatile tool designed to convert data storage capacities. 
+                        It facilitates the seamless conversion of digital information from one scale to another, 
+                        enabling users to comprehend and manage data storage requirements more effectively.
                     </p>
                 </div>
 
