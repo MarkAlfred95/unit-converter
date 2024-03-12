@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 0.5rem;
+    /* gap: 0.5rem; */
     overflow-y: auto;
     /* scrollbar-width: thin; */
     /* scrollbar-color: var(--gray-color) transparent;  */
@@ -74,8 +74,7 @@
 }
 .calc_link-side.active{
     font-weight: 600;
-    font-size: 1.2em;
-    /* color: var(--primary-color); */
+    font-size: 1em;
 }
 /* .calc_link-side.active .calc_sidebar_item_icon{
     transform: scale(1.2);
@@ -89,6 +88,9 @@
 }
 .calc_sidebar_item_text{
     font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .calculator_content{
     margin-top: 1rem;

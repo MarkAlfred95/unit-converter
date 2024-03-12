@@ -46,4 +46,12 @@ nav ul{
 }
 .app_title{
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+.app_title img{
+    width: 2.5rem;
+    height: 2.5rem;
 }

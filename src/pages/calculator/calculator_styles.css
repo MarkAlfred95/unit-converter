@@ -497,15 +497,18 @@
 /* BMI CALCULATOR */
 .bmi_unit_system_select{
     margin-bottom: 1rem;
-    width: 15rem;
+    /* width: 15rem; */
+    /* padding: 0 2rem; */
     border: 2px solid var(--dark-color);
     border-radius: 0.5rem;
+    display: flex;
     overflow: hidden;
 }
 .bmi_unit_system_select button{
     all: unset;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1.5rem;
     width: 50%;
+    white-space: nowrap;
     text-align: center;
     cursor: pointer;
 }
@@ -617,7 +620,7 @@
 
 .bmi_chart_wrap{
     margin: 2rem 0;
-    width: 45%;
+    width: 25rem;
     height: 10px;
     display: flex;
     position: relative;
@@ -658,19 +661,19 @@
     font-size: 0.8em;
     font-weight: 600;
     color: var(--dark-color);
-    transform: translate(2.38%, 12px);
+    transform: translate(2%, 12px);
 }
 .bmi_scale-b{
-    transform: translate(14.28%, 12px);
+    transform: translate(14%, 12px);
 }
 .bmi_scale-c{
-    transform: translate(45.23%, 12px);
+    transform: translate(44%, 12px);
 }
 .bmi_scale-d{
-    transform: translate(69.03%, 12px);
+    transform: translate(68%, 12px);
 }
 .bmi_scale-e{
-    transform: translate(92.83%, 12px);
+    transform: translate(92%, 12px);
 }
 
 .bmi_scale_indicator_wrap{
@@ -684,13 +687,19 @@
     border-radius: 5px;
 }
 
+.calc_table_wrap{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
 .bmi_table_wrap{
     width: 100%;
     display: flex;
     justify-content: center;
 }
 .bmi_table{
-    width: 45%;
+    width: 25rem;
     padding: 5px;
     border-collapse: collapse;
     border: 2px solid grey;
@@ -719,4 +728,104 @@
 .bmi_table_td_color{
     width: 12px;
     height: 12px;
+}
+
+/* AVERAGE CALCULATOR */
+.average_calc_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    /* gap: 2rem; */
+}
+.average_textarea_wrap{
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.average_textarea_wrap p{
+    width: 100%;
+}
+.average_textarea_wrap textarea{
+    all: unset;
+    padding: 1rem;
+    width: 100%;
+    height: 7rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+/* DISCOUNT CALCULATOR */
+.discount_calc_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* gap: 2rem; */
+}
+.discount_calc_inputs_wrap{
+    margin: 1rem 0;
+}
+/* .discount_select_wrap{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.discount_input_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+.discount_input_wrap p{
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+.discount_input_wrap input{
+    all: unset;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+}
+
+
+/* PERCENTAGE CALCULATOR */
+.percentage_wrap{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.small_input_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3rem;
+    width: 10rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.small_input_wrap input{
+    all: unset;
+    padding: 5px;
+    width: 70%;
+    text-align: right;
+}
+.small_input_wrap p{
+    display: grid;
+    place-content: center;
+    width: 2.5rem;
+    height: 100%;
+    border-left: 2px solid var(--dark-color);
+    background: var(--gray-color);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.custom_select_small_wrap{
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
