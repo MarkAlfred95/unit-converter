@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 import CustomButton from "../../components/custom/custom_button";
 import CustomBtnClear from "../../components/custom/custom_btn_clear";
@@ -260,59 +261,66 @@ const BMICalculator = () => {
                     </div>
 
                     <div className="bmi_inputs_wrap">
-                        {isMetric ? (
-                            <>
-                            <BMIInput 
-                            unitLabel="Height:"
-                            unit="cm"
-                            value={height}
-                            onChange={setHeight}
-                            />
-                            <BMIInput 
-                                unitLabel="Weight:"
-                                unit="kg"
-                                value={weight}
-                                onChange={setWeight}
-                            />
-                            </>
-                        ) : (
-                            <>
-                            <div className="bmi_input_wrap">
-                                <div className="bmi_input_container">
-                                    <div className="bmi_input_text">Height:</div>
-                                    <div className="bmi_input_input_wrap_small">
-                                        <input 
-                                            className="bmi_input_input"
-                                            type="number" 
-                                            placeholder="0"
-                                            min="0"
-                                            value={heightFt}
-                                            onChange={handleChangeHeightFt}
-                                        />
-                                        <div className="bmi_input_unit">ft</div>
-                                    </div>
-                                    <div className="bmi_input_input_wrap_small">
-                                        <input 
-                                            className="bmi_input_input"
-                                            type="number" 
-                                            placeholder="0"
-                                            value={heightIn}
-                                            min="0"
-                                            max="12"
-                                            onChange={handleChangeHeightIn}
-                                        />
-                                        <div className="bmi_input_unit">in</div>
+                        {isMetric &&
+                            <motion.div
+                                initial={{ opacity: 0, y: "-2rem" }}
+                                animate={{ opacity: 1, y: 0 }}
+                            >
+                                <BMIInput 
+                                    unitLabel="Height:"
+                                    unit="cm"
+                                    value={height}
+                                    onChange={setHeight}
+                                />
+                                <BMIInput 
+                                    unitLabel="Weight:"
+                                    unit="kg"
+                                    value={weight}
+                                    onChange={setWeight}
+                                />
+                            </motion.div>
+                        }
+                        { !isMetric &&  
+                            <motion.div
+                                initial={{ opacity: 0, y: "-2rem" }}
+                                animate={{ opacity: 1, y: 0 }}
+                            >
+                                <div className="bmi_input_wrap">
+                                    <div className="bmi_input_container">
+                                        <div className="bmi_input_text">Height:</div>
+                                        <div className="bmi_input_input_wrap_small">
+                                            <input 
+                                                className="bmi_input_input"
+                                                type="number" 
+                                                placeholder="0"
+                                                min="0"
+                                                value={heightFt}
+                                                onChange={handleChangeHeightFt}
+                                            />
+                                            <div className="bmi_input_unit">ft</div>
+                                        </div>
+                                        <div className="bmi_input_input_wrap_small">
+                                            <input 
+                                                className="bmi_input_input"
+                                                type="number" 
+                                                placeholder="0"
+                                                value={heightIn}
+                                                min="0"
+                                                max="12"
+                                                onChange={handleChangeHeightIn}
+                                            />
+                                            <div className="bmi_input_unit">in</div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             <BMIInput 
                                 unitLabel="Weight:"
                                 unit="lb"
                                 value={weightLb}
                                 onChange={setWeightLb}
                             />
-                            </>
-                        )}
+                            </motion.div>
+                        }
                     </div>
 
                     <div className="bmi_btn_wrap">

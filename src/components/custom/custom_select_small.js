@@ -5,13 +5,11 @@ import './custom_input_styles.css'
 import arrow_down from "../../assets/expand_more.svg"
 
 
-const CustomSelect = ({
+const CustomSelectSmall = ({
     selectOptions,
     selectedOption,
     setSelectedOption
 }) => {
-
-    // const [selectedOption, setSelectedOption] = useState(selectOptions[0]);
     const [showOptions, setShowOptions] = useState(false);
 
     const selectRef = useRef(null);
@@ -42,29 +40,24 @@ const CustomSelect = ({
 
     return (
         <>
-        <div className="unit_container">
-            <div 
-                className="selected_option" 
+        <div className="select_small_container">
+            <div
+                className="select_small_wrap"
                 onClick={handleSelectClick}
                 ref={selectRef}
             >
-                <div>
-                    <div className="unit_symbol">{selectedOption.option}</div>
-                    <div className="unit_name">{selectedOption.option_name}</div>
-                    <div className="arrow_down_wrap">
-                        <img 
-                            className="unit_arrow-down"
-                            src={arrow_down}
-                            alt="select-unit"
-                        />
-                    </div>
-                </div>
+                <div>{selectedOption.selectName}</div>
+                <img 
+                    className="unit_arrow-down"
+                    src={arrow_down}
+                    alt="select-unit"
+                />
             </div>
         </div>
         <AnimatePresence initial={false}>
             {showOptions && (
                 <motion.div 
-                    className="options_list" 
+                    className="small_options_list" 
                     ref={optionsRef}
                     initial={{ opacity: 0, height: 0}}
                     animate={{ opacity: 1, height: "auto"}}
@@ -72,11 +65,11 @@ const CustomSelect = ({
                 >
                     {selectOptions.map(option => (
                         <div 
-                            key={option.option}
-                            className="options_list_items" 
+                            key={option.selectValue}
+                            className="small_options_list_items" 
                             onClick={() => handleOptionClick(option)}
                         >
-                            {option.option_name}
+                            {option.selectName}
                         </div>
                     ))}
                 </motion.div>
@@ -86,4 +79,4 @@ const CustomSelect = ({
     );
 };
 
-export default CustomSelect;
+export default CustomSelectSmall;
