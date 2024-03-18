@@ -36,7 +36,7 @@ const Hero = () => {
                         to="calculators" 
                         spy={true} 
                         smooth={true} 
-                        offset={-50} 
+                        offset={-20} 
                         duration={500} 
                         // onSetActive={handleSetActive}
                         >
