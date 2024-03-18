@@ -19,7 +19,10 @@ const Navbar = () => {
         onClick={handleLinkHome}
       >
         <img src={calcplus} alt="calcplus"/>
-        CalcPlus
+        <div className="webapp_name">
+          <div>Calc</div>
+          <div className="webapp_name_blue">Plus</div>
+        </div>
       </motion.div>
       <ul>
         <NavLink to="/" className="nav_item_link">Home</NavLink>

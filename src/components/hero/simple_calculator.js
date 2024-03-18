@@ -52,8 +52,23 @@ const SimpleCalculator = () => {
         <div className="simple_calc_container">
             <div className="simple_calc_screen_wrap">
                 <div className="simple_calc_screen">
-                    <div className="simple_calc_history">{history}</div>
-                    <div className="simple_calc_result">{expression}</div>
+                    {/* <div className="simple_calc_history">{history}</div> */}
+                    <div className="simple_calc_history">
+                        <input 
+                            type="text" 
+                            placeholder="0"
+                            value={history}
+                            readOnly
+                        />
+                    </div>
+                    <div className="simple_calc_result">
+                        <input 
+                            type="text" 
+                            placeholder="0"
+                            value={expression}
+                            readOnly
+                        />
+                    </div>
                 </div>
             </div>
 

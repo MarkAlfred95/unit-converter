@@ -73,6 +73,7 @@
     background: linear-gradient(90deg, var(--gray-color), transparent);
 }
 .calc_link-side.active{
+    background: linear-gradient(90deg, var(--gray-color), transparent);
     font-weight: 600;
     font-size: 1em;
 }
@@ -84,7 +85,7 @@
     width: 2rem;
     height: 2rem;
     border-radius: 5px;
-    background: var(--light-color);
+    /* background: var(--light-color); */
 }
 .calc_sidebar_item_text{
     font-size: 0.9em;

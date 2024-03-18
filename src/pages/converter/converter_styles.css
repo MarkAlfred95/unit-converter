@@ -68,3 +68,89 @@
     display: flex;
     gap: 1rem;
 }
+
+
+.converter_wrap_center{
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.converter_input_wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.converter_input_wrap p{
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+.converter_input_wrap input{
+    all: unset;
+    padding: 0.5rem;
+    width: 100%;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+}
+
+.convert_icon_wrap-black{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-content: center;
+}
+.convert_icon-black{
+    width: 2rem;
+    height: 2rem;
+    filter: invert(10%) sepia(31%) saturate(538%) hue-rotate(157deg) brightness(96%) contrast(91%);
+}
+
+.currency_select_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.currency_select_container{
+    /* width: 50%; */
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.currency_select_wrap p{
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+.currency_select_wrap select{
+    /* all: unset; */
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    font-family: 'Poppins';
+    font-size: 1em;
+}
+
+.converter_wrap_center button{
+    all: unset;
+    /* margin-top: 2rem; */
+    width: 100%;
+    padding: 0.5rem 2rem;
+    background: var(--dark-color);
+    border-radius: 7px;
+    display: grid;
+    place-content: center;
+    color: white;
+    cursor: pointer;
+}
+.exchange_rate_wrap{
+    margin: 2rem 0;
+    line-height: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}

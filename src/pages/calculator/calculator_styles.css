@@ -20,7 +20,7 @@
 }
 
 .calculator_container h1{
-    color: var(--dark-color-b);
+    color: var(--dark-color);
     width: 100%;
     font-size: 3em;
     margin: 0.5rem 0;
@@ -35,16 +35,23 @@
     justify-content: center;
     gap: 1.5rem;
 }
+.calc_items_wrap h2{
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+    margin: 2rem 0 1rem 0;
+}
 .calc_item_container{
-    width: 10rem;
-    height: 12rem;
+    padding: 0.5rem;
+    width: 18rem;
+    /* height: 5rem; */
     background: white;
     border-radius: 0.5rem;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.25);
-    border: 3px solid var(--dark-color-b);
+    border: 3px solid var(--dark-color);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start;
     align-items: center;
     cursor: pointer;
     transform: translateX(0) translateY(0);
@@ -52,24 +59,24 @@
 }
 .calc_item_container:hover{
     -webkit-box-shadow: 
-        1px 1px var(--dark-color-b), 
-        2px 2px var(--dark-color-b), 
-        3px 3px var(--dark-color-b), 
-        4px 4px var(--dark-color-b), 
-        5px 5px var(--dark-color-b), 
-        6px 6px var(--dark-color-b), 
-        7px 7px var(--dark-color-b), 
-        8px 8px var(--dark-color-b);
+        1px 1px var(--dark-color), 
+        2px 2px var(--dark-color), 
+        3px 3px var(--dark-color), 
+        4px 4px var(--dark-color), 
+        5px 5px var(--dark-color), 
+        6px 6px var(--dark-color), 
+        7px 7px var(--dark-color), 
+        8px 8px var(--dark-color);
     
     box-shadow: 
-        1px 1px var(--dark-color-b), 
-        2px 2px var(--dark-color-b), 
-        3px 3px var(--dark-color-b), 
-        4px 4px var(--dark-color-b), 
-        5px 5px var(--dark-color-b), 
-        6px 6px var(--dark-color-b), 
-        7px 7px var(--dark-color-b), 
-        8px 8px var(--dark-color-b);
+        1px 1px var(--dark-color), 
+        2px 2px var(--dark-color), 
+        3px 3px var(--dark-color), 
+        4px 4px var(--dark-color), 
+        5px 5px var(--dark-color), 
+        6px 6px var(--dark-color), 
+        7px 7px var(--dark-color), 
+        8px 8px var(--dark-color);
 
     -webkit-transform: translateX(-8px) translateY(-8px);
     transform: translateX(-8px) translateY(-8px);
@@ -80,9 +87,14 @@
 }
 
 .calc_item_image{
-    width: 5rem;
-    height: 5rem;
-    background: var(--light-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    /* background: var(--light-color);
+    border-radius: 0.5rem; */
+}
+.calc_item_img{
+    width: 100%;
+    aspect-ratio: 1/1;
 }
 .calc_item_name{
     text-align: center;
@@ -97,9 +109,9 @@
 .calculator_nav{
     margin: 1rem 0 3rem 0;
     width: 24rem;
-    height: 3.5rem;
-    background: var(--light-color);
-    border: 3px solid var(--dark-color-b);
+    height: 3rem;
+    background: white;
+    border: 3px solid var(--dark-color);
     border-radius: 10px;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
     display: flex;
@@ -109,7 +121,7 @@
 .calculator_nav_items{
     width: 40%;
     height: 100%;
-    color: var(--dark-color-b);
+    color: var(--dark-color);
     font-size: 1.2em;
     display: flex;
     justify-content: center;
@@ -122,54 +134,54 @@
 }
 .calc_nav_active{
     height: 100%;
-    background: var(--dark-color-b);
+    background: var(--dark-color);
     color: white;
 }
 
 @-webkit-keyframes shadow-pop-br {
     0% {
         -webkit-box-shadow: 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b);
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color);
         box-shadow: 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b),
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b);
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color),
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color);
         
         -webkit-transform: translateX(0) translateY(0);
         transform: translateX(0) translateY(0);
     }
     100% {
         -webkit-box-shadow: 
-            1px 1px var(--dark-color-b), 
-            2px 2px var(--dark-color-b), 
-            3px 3px var(--dark-color-b), 
-            4px 4px var(--dark-color-b), 
-            5px 5px var(--dark-color-b), 
-            6px 6px var(--dark-color-b), 
-            7px 7px var(--dark-color-b), 
-            8px 8px var(--dark-color-b);
+            1px 1px var(--dark-color), 
+            2px 2px var(--dark-color), 
+            3px 3px var(--dark-color), 
+            4px 4px var(--dark-color), 
+            5px 5px var(--dark-color), 
+            6px 6px var(--dark-color), 
+            7px 7px var(--dark-color), 
+            8px 8px var(--dark-color);
 
         box-shadow: 
-            1px 1px var(--dark-color-b), 
-            2px 2px var(--dark-color-b), 
-            3px 3px var(--dark-color-b), 
-            4px 4px var(--dark-color-b), 
-            5px 5px var(--dark-color-b), 
-            6px 6px var(--dark-color-b), 
-            7px 7px var(--dark-color-b), 
-            8px 8px var(--dark-color-b);
+            1px 1px var(--dark-color), 
+            2px 2px var(--dark-color), 
+            3px 3px var(--dark-color), 
+            4px 4px var(--dark-color), 
+            5px 5px var(--dark-color), 
+            6px 6px var(--dark-color), 
+            7px 7px var(--dark-color), 
+            8px 8px var(--dark-color);
 
         -webkit-transform: translateX(-8px) translateY(-8px);
         transform: translateX(-8px) translateY(-8px);
@@ -179,45 +191,45 @@
 @keyframes shadow-pop-br {
     0% {
         -webkit-box-shadow: 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b);
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color);
         box-shadow: 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b), 
-            0 0 var(--dark-color-b);
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color), 
+            0 0 var(--dark-color);
         -webkit-transform: translateX(0) translateY(0);
         transform: translateX(0) translateY(0);
     }
     100% {
         -webkit-box-shadow: 
-            1px 1px var(--dark-color-b), 
-            2px 2px var(--dark-color-b), 
-            3px 3px var(--dark-color-b), 
-            4px 4px var(--dark-color-b), 
-            5px 5px var(--dark-color-b), 
-            6px 6px var(--dark-color-b), 
-            7px 7px var(--dark-color-b), 
-            8px 8px var(--dark-color-b);
+            1px 1px var(--dark-color), 
+            2px 2px var(--dark-color), 
+            3px 3px var(--dark-color), 
+            4px 4px var(--dark-color), 
+            5px 5px var(--dark-color), 
+            6px 6px var(--dark-color), 
+            7px 7px var(--dark-color), 
+            8px 8px var(--dark-color);
         box-shadow: 
-            1px 1px var(--dark-color-b), 
-            2px 2px var(--dark-color-b), 
-            3px 3px var(--dark-color-b), 
-            4px 4px var(--dark-color-b), 
-            5px 5px var(--dark-color-b), 
-            6px 6px var(--dark-color-b), 
-            7px 7px var(--dark-color-b), 
-            8px 8px var(--dark-color-b);
+            1px 1px var(--dark-color), 
+            2px 2px var(--dark-color), 
+            3px 3px var(--dark-color), 
+            4px 4px var(--dark-color), 
+            5px 5px var(--dark-color), 
+            6px 6px var(--dark-color), 
+            7px 7px var(--dark-color), 
+            8px 8px var(--dark-color);
         -webkit-transform: translateX(-8px) translateY(-8px);
         transform: translateX(-8px) translateY(-8px);
     }
@@ -828,4 +840,65 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+/* SALARY CALCULATOR */
+.salary_input_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    /* gap: 0.5rem; */
+    justify-content: space-between;
+}
+.salary_input_wrap p{
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+.salary_input_wrap input{
+    all: unset;
+    padding: 0.5rem;
+    width: 50%;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+}
+.salary_input_wrap select{
+    font-family: 'Poppins';
+    font-size: 1em;
+    padding: 0.5rem;
+    width: 40%;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+}
+/* .salary_table_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+} */
+.salary_table{
+    width: 25rem;
+    padding: 5px;
+    border-collapse: collapse;
+    border: 2px solid grey;
+}
+.salary_table thead tr th, .salary_table tbody tr td{
+    border: 1px solid grey;
+    text-align: left;
+    padding: 0.5rem;
+}
+/* .salary_table thead tr th:nth-child(1){
+    width: 10%;
+}
+.salary_table thead tr th:nth-child(2){
+    width: 35%;
+}
+.salary_table thead tr th:nth-child(3){
+    width: 55%;
+} */
+.salary_table_td_color_wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
