@@ -7,7 +7,7 @@
     background: white;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -153,4 +153,38 @@
     line-height: 0;
     font-size: 1.5em;
     font-weight: 600;
+}
+
+.horizontal_division{
+    display: none;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    /* AGE CALCULATOR */
+    .horizontal_division{
+        display: block;
+        height: 3rem;
+        width: 100%;
+    }
+    .converter_wrap{
+        width: 100%;
+    }
+    .converter_line{
+        width: 100%;
+        height: 3px;
+    }
+    .convert_icon_wrap{
+        transform: rotateZ(90deg);
+    }
+    .converter_division_wrap{
+        height: 3rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* AGE CALCULATOR */
+    /* .converter_wrap_center{
+        width: 20rem;
+    } */
 }

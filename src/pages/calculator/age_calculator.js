@@ -100,21 +100,28 @@ const AgeCalculator = () => {
                 </div>    
 
                 <div className="calc_container">
-                    <div className="date_picker_container">
-                        <div className="date_picker_wrap">
-                            <div className="date_picker_label">Date of Birth:</div>
-                            <DatePicker 
-                                value={birthDate}
-                                onChange={setBirthDate}
-                            />
-                        </div>
-
-                        <div className="date_picker_wrap">
-                            <div className="date_picker_label">Age as of:</div>
-                            <DatePicker 
-                                value={targetDate}
-                                onChange={setTargetDate}
-                            />
+                    <div 
+                        style={{ 
+                            width: '100%',
+                            display: "flex",
+                            justifyContent: 'center', 
+                        }}
+                    >
+                        <div className="date_picker_container">
+                            <div className="date_picker_wrap">
+                                <div className="date_picker_label">Date of Birth:</div>
+                                <DatePicker
+                                    value={birthDate}
+                                    onChange={setBirthDate}
+                                />
+                            </div>
+                            <div className="date_picker_wrap">
+                                <div className="date_picker_label">Age as of:</div>
+                                <DatePicker
+                                    value={targetDate}
+                                    onChange={setTargetDate}
+                                />
+                            </div>
                         </div>
                     </div>
                     <div className="age_calculation_container">

@@ -78,7 +78,7 @@ nav{
     justify-content: flex-start;
     gap: 0.5rem;
     transition: 
-        width 300ms ease-in-out;
+        width 150ms ease-in-out;
     z-index: 12;
 }
 .ham_menu_btn{
