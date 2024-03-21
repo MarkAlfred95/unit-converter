@@ -33,24 +33,24 @@ const CustomInput = ({
     };
 
     return (
-        <div className="calc_category_input_wrap">
-            <label className="calc_category_label">{label}:</label>
-            <label className="calc_category_label-b">Unit:</label>
-            <input type="number" value={value} onChange={handleInputChange} placeholder="0" />
-            <div className="custom-select_wrap">
-                <select value={unit} onChange={handleUnitChange}>
-                    {unitOptions.map(option => (
-                      <option key={option.option} value={option.option_name}>{option.option_name}</option>
-                    ))}
-                </select>
-                {/* <div className="custom-arrow"></div> */}
-                <img 
-                  className="custom-arrow"
-                  src={arrow_down}
-                  alt="select-unit"
-                />
-            </div>
-        </div>
+      <div className="calc_category_input_wrap">
+          <label className="calc_category_label">{label}:</label>
+          <label className="calc_category_label-b">Unit:</label>
+          <input type="number" value={value} onChange={handleInputChange} placeholder="0" />
+          <div className="custom-select_wrap">
+              <select value={unit} onChange={handleUnitChange}>
+                  {unitOptions.map(option => (
+                    <option key={option.option} value={option.option_name}>{option.option_name}</option>
+                  ))}
+              </select>
+              {/* <div className="custom-arrow"></div> */}
+              <img
+                className="custom-arrow"
+                src={arrow_down}
+                alt="select-unit"
+              />
+          </div>
+      </div>
     )
 }
 
