@@ -7,7 +7,8 @@
 }
 .calculator_container{
     padding: 3rem 0;
-    width: 75%;
+    /* width: 75%; */
+    width: 90%;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +24,9 @@
     color: var(--dark-color);
     width: 100%;
     font-size: 3em;
-    margin: 0.5rem 0;
+    text-align: center;
+    line-height: 1em;
+    margin: 1rem 0;
     filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.15));
     display: flex;
     justify-content: center;
@@ -116,6 +119,7 @@
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
     display: flex;
     justify-content: space-between;
+    transform-origin: top;
     position: relative;
 }
 .calculator_nav_items{
@@ -363,9 +367,11 @@
     transform: rotate(45deg) translate(-24px, -24px);
 }
 .input_wrap{
+    width: 100%;
     margin: 1.5rem 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -870,11 +876,6 @@
     border: 2px solid var(--dark-color);
     border-radius: 0.5rem;
 }
-/* .salary_table_wrap{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
 .salary_table{
     width: 25rem;
     padding: 5px;
@@ -886,19 +887,44 @@
     text-align: left;
     padding: 0.5rem;
 }
-/* .salary_table thead tr th:nth-child(1){
-    width: 10%;
-}
-.salary_table thead tr th:nth-child(2){
-    width: 35%;
-}
-.salary_table thead tr th:nth-child(3){
-    width: 55%;
-} */
 .salary_table_td_color_wrap{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media only screen and (max-width: 1150px) {
+
+    /* AREA CALCULATOR */
+    .calc_category_container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+
+    /* HOME */
+    .calculator_container h1{
+        font-size: 2.5em;
+    }
+    .calculator_nav{
+        width: 20rem;
+        height: 2.75rem;
+    }
+    .calc_item_container{
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 7rem;
+    }
+    .calc_item_name{
+        width: 100%;
+        padding: 0;
+        font-size: 0.8em;
+    }
+    .calc_item_name span{
+        text-align: center;
+    }
 }

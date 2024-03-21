@@ -1,16 +1,21 @@
 .calculator_background{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     padding-top: 3rem;
     /* background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); */
-    background-color: var(--light-color);
+    /* background-color: var(--light-color);
     background-image:  
         linear-gradient(var(--gray-color) 2px, transparent 2px), 
         linear-gradient(to right, var(--gray-color) 2px, var(--light-color) 2px);
     background-size: 5rem 5rem;
-    background-position: 2.5rem 2.5rem;
+    background-position: 2.5rem 2.5rem; */
     position: relative;
 }
 
+.sized-box{
+    height: 7rem;
+    width: 1005;
+    background: var(--light-color);
+}
 .curves {
     position: absolute;
     top: 0;
@@ -46,12 +51,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: var(--light-color);
+    /* background-color: var(--light-color);
     background-image:  
         linear-gradient(var(--gray-color) 2px, transparent 2px), 
         linear-gradient(to right, var(--gray-color) 2px, var(--light-color) 2px);
     background-size: 5rem 5rem;
-    background-position: 2.5rem 2.5rem;
+    background-position: 2.5rem 2.5rem; */
 }
 .about_container{
     margin: 1rem;
@@ -96,12 +101,12 @@
     height: calc(100% - 4rem);
     display: flex;
     justify-content: center;
-    background-color: var(--light-color);
+    /* background-color: var(--light-color);
     background-image:  
         linear-gradient(var(--gray-color) 2px, transparent 2px), 
         linear-gradient(to right, var(--gray-color) 2px, var(--light-color) 2px);
     background-size: 5rem 5rem;
-    background-position: 2.5rem 2.5rem;
+    background-position: 2.5rem 2.5rem; */
 }
 .notfound_container{
     padding: 1rem 1rem 2rem 1rem;
@@ -137,4 +142,20 @@
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .about_container{
+        width: 90%;
+    }
+    .notfound_container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    /* .about_container{
+        width: 90%;
+    } */
 }
