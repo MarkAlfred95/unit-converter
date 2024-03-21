@@ -110,11 +110,17 @@ const TemperatureConverter = () => {
 
                 <div className="converter_container">
                     <div className="converter_wrap">
-                        <CustomSelect 
-                            selectOptions={selectOptions}
-                            selectedOption={selectedOptionA}
-                            setSelectedOption={handleUnitChange}
-                        />
+                        <div style={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }}>
+                            <CustomSelect 
+                                selectOptions={selectOptions}
+                                selectedOption={selectedOptionA}
+                                setSelectedOption={handleUnitChange}
+                            />
+                        </div>
                         <input 
                             type="number" 
                             placeholder="0" 
@@ -131,21 +137,29 @@ const TemperatureConverter = () => {
                         </div>
                     </div>
 
+                    <div className="horizontal_division"></div>
                     <div className="converter_line"></div>
-
                     <div className="convert_icon_wrap">
                         <img
-                            className="convert_icon" 
-                            src={convert_icon} 
+                            className="convert_icon"
+                            src={convert_icon}
                             alt="convert"
                         />
                     </div>
+                    <div className="horizontal_division"></div>
+
                     <div className="converter_wrap">
-                        <CustomSelect 
-                            selectOptions={selectOptions}
-                            selectedOption={selectedOptionB}
-                            setSelectedOption={handleUnitChangeB}
-                        />
+                        <div style={{
+                            width: '100%',
+                            display: 'flex',
+                            justifyContent: 'center'
+                        }}>
+                            <CustomSelect 
+                                selectOptions={selectOptions}
+                                selectedOption={selectedOptionB}
+                                setSelectedOption={handleUnitChangeB}
+                            />
+                        </div>
                         <input 
                             type="number" 
                             placeholder="0" 

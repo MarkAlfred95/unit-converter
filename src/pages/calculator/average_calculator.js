@@ -105,16 +105,18 @@ const AverageCalculator = () => {
                         </div>
                     </div>
 
-                    <table className="bmi_table">
-                        <tbody>
-                          {averageValues.map((row, index) => (
-                            <tr key={index}>
-                              <td>{row.result_name}</td>
-                              <td>{row.result}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                    </table>
+                    <div className="calc_table_wrap">
+                        <table className="bmi_table">
+                            <tbody>
+                              {averageValues.map((row, index) => (
+                                <tr key={index}>
+                                  <td>{row.result_name}</td>
+                                  <td>{row.result}</td>
+                                </tr>
+                              ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

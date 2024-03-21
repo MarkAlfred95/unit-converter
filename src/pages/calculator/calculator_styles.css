@@ -247,8 +247,6 @@
     justify-content: center;
 }
 .pages_container{
-    /* margin-top: 4rem; */
-    /* margin: 2rem; */
     width: 100%;
 }
 .pages_description_wrap{
@@ -392,14 +390,15 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .date_picker_container{
     margin-bottom: 1rem;
-    width: 100%;
+    width: 21rem;
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-between;
+    /* gap: 3rem; */
 }
 .date_picker_wrap{
     width: 10rem;
@@ -419,7 +418,7 @@
 }
 
 .age_calculation_container{
-    width: 23rem;
+    width: 21rem;
     /* height: 20rem; */
     border: 2px solid var(--dark-color);
     border-radius: 0.5rem;
@@ -629,7 +628,7 @@
     font-weight: 600;
 }
 .bmi_btn_wrap{
-    margin-top: 1rem;
+    margin: 1rem 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -926,5 +925,47 @@
     }
     .calc_item_name span{
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* AGE CALCULATOR */
+    .date_picker_container{
+        width: 20rem;
+    }
+    .age_calculation_container{
+        width: 20rem;
+    }
+    .date_picker_wrap{
+        width: 9.5rem;
+    }
+    .age_summary_result_wrap{
+        gap: 0;
+    }
+
+    /* AVERAGE CALCULATOR */
+    .average_textarea_wrap{
+        width: 20rem;
+    }
+
+    /* BMI Table */
+    .bmi_table{
+        width: 20rem;
+    }
+    .bmi_chart_wrap{
+        width: 20rem;
+    }
+    .bmi_unit_system_select button{
+        font-size: 0.9em;
+    }
+
+    /* PERCENTAGE CALCULATOR */
+    .small_input_wrap{
+        width: 5rem;
+    }
+
+    /* SALARY CALCULATOR */
+    .salary_table{
+        width: 20rem;
     }
 }
