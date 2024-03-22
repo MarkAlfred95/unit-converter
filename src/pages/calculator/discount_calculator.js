@@ -6,8 +6,8 @@ import CustomBtnClear from '../../components/custom/custom_btn_clear';
 
 const DiscountCalculator = () => {
     const [isPercent, setIsPercent] = useState(true);
-    const [priceBeforeDiscount, setPriceBeforeDiscount] = useState(0);
-    const [discountValue, setDiscountValue] = useState(0);
+    const [priceBeforeDiscount, setPriceBeforeDiscount] = useState('');
+    const [discountValue, setDiscountValue] = useState('');
     const [priceAfterDiscount, setPriceAfterDiscount] = useState(0);
     const [savedAmount, setSavedAmount] = useState(0);
     const [discountPercentage, setDiscountPercentage] = useState(0);
@@ -81,8 +81,11 @@ const DiscountCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={priceBeforeDiscount}
-                                    onChange={(e) => setPriceBeforeDiscount(parseFloat(e.target.value))}
+                                    value={priceBeforeDiscount.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setPriceBeforeDiscount(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div>
@@ -96,8 +99,11 @@ const DiscountCalculator = () => {
                                         <input
                                             type="number"
                                             placeholder="0"
-                                            value={discountValue}
-                                            onChange={(e) => setDiscountValue(parseFloat(e.target.value))}
+                                            value={discountValue.toString()} 
+                                            onChange={(e) => {
+                                                const value = parseFloat(e.target.value);
+                                                setDiscountValue(isNaN(value) ? '' : value);
+                                            }}
                                         />
                                     </motion.div>
                                 }
@@ -109,10 +115,13 @@ const DiscountCalculator = () => {
                                     >
                                         <p>Discount Amount:</p>
                                         <input
-                                          type="number"
-                                          placeholder="0"
-                                          value={discountValue}
-                                          onChange={(e) => setDiscountValue(parseFloat(e.target.value))}
+                                            type="number"
+                                            placeholder="0"
+                                            value={discountValue.toString()} 
+                                            onChange={(e) => {
+                                                const value = parseFloat(e.target.value);
+                                                setDiscountValue(isNaN(value) ? '' : value);
+                                            }}
                                         />
                                     </motion.div>
                                 }

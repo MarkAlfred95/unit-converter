@@ -20,8 +20,8 @@ const TemperatureConverter = () => {
     const [selectedOptionA, setSelectedOptionA] = useState(selectOptions[0]);
     const [selectedOptionB, setSelectedOptionB] = useState(selectOptions[0]);
 
-    const [inputValueA, setInputValueA] = useState(0);
-    const [inputValueB, setInputValueB] = useState(0);
+    const [inputValueA, setInputValueA] = useState("");
+    const [inputValueB, setInputValueB] = useState("");
 
     const convertValues = (newValue, fromOption, toOption) => {
 

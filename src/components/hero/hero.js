@@ -44,7 +44,7 @@ const Hero = () => {
                             whileHover={{scale: 1.05}} 
                             whileTap={{scale: 0.95}}
                         >
-                            Let Go!
+                            Let's Go!
                         </motion.button>
                     </Link>
                 </div>

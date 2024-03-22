@@ -207,8 +207,11 @@ const SalaryCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={salary}
-                                    onChange={(e) => setSalary(parseFloat(e.target.value))}
+                                    value={salary.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setSalary(isNaN(value) ? '' : value);
+                                    }}
                                 />
                                 <select value={salaryType} onChange={(e) => setSalaryType(e.target.value)}>
                                     <option value="hourly">Hourly</option>
@@ -225,8 +228,11 @@ const SalaryCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={hoursPerWeek}
-                                    onChange={(e) => setHoursPerWeek(parseFloat(e.target.value))}
+                                    value={hoursPerWeek.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setHoursPerWeek(isNaN(value) ? '' : value)
+                                    }}
                                 />
                             </div>
                             <div className="discount_input_wrap">
@@ -234,8 +240,11 @@ const SalaryCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={daysPerWeek}
-                                    onChange={(e) => setDaysPerWeek(parseFloat(e.target.value))}
+                                    value={daysPerWeek.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setDaysPerWeek(isNaN(value) ? '' : value)
+                                    }}
                                 />
                             </div>
                             <div className="discount_input_wrap">
@@ -243,8 +252,11 @@ const SalaryCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={holidaysPerYear}
-                                    onChange={(e) => setHolidaysPerYear(parseFloat(e.target.value))}
+                                    value={holidaysPerYear.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setHolidaysPerYear(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div className="discount_input_wrap">
@@ -252,8 +264,11 @@ const SalaryCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={vacationsPerYear}
-                                    onChange={(e) => setVacationsPerYear(parseFloat(e.target.value))}
+                                    value={vacationsPerYear.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setVacationsPerYear(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div className="bmi_btn_wrap">
