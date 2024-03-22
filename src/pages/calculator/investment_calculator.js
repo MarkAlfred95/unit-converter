@@ -68,8 +68,11 @@ const InvestmentCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={principal}
-                                    onChange={(e) => setPrincipal(parseFloat(e.target.value))}
+                                    value={principal.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setPrincipal(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div className="discount_input_wrap">
@@ -77,8 +80,11 @@ const InvestmentCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={rate}
-                                    onChange={(e) => setRate(parseFloat(e.target.value))}
+                                    value={rate.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setRate(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div className="discount_input_wrap">
@@ -86,8 +92,11 @@ const InvestmentCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={time}
-                                    onChange={(e) => setTime(parseFloat(e.target.value))}
+                                    value={time.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setTime(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div className="bmi_btn_wrap">

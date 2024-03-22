@@ -86,6 +86,10 @@ const AgeCalculator = () => {
         nextBDays = initNextBday;
     }
 
+    if (nextBirthdayMonth <= 0 || (targetDate.getMonth() === birthDate.getMonth())){
+        nextBirthdayMonth += 11;
+    }
+
     return (
         <>
         <div className="pages_wrap">

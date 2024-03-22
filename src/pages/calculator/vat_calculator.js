@@ -6,9 +6,9 @@ import CustomBtnClear from '../../components/custom/custom_btn_clear';
 
 const VATCalculator = () => {
     const [isVAT, setIsVAT] = useState(true);
-    const [vatRate, setVatRate] = useState(0);
-    const [priceBeforeVAT, setPriceBeforeVAT] = useState(0);
-    const [priceWithVAT, setPriceWithVAT] = useState(0);
+    const [vatRate, setVatRate] = useState('');
+    const [priceBeforeVAT, setPriceBeforeVAT] = useState('');
+    const [priceWithVAT, setPriceWithVAT] = useState('');
 
     const [vatAmount, setVATAmount] = useState(0);
     const [vatAmountEx, setVATAmountEx] = useState(0);
@@ -92,8 +92,11 @@ const VATCalculator = () => {
                                 <input
                                     type="number"
                                     placeholder="0"
-                                    value={vatRate}
-                                    onChange={(e) => setVatRate(parseFloat(e.target.value))}
+                                    value={vatRate.toString()}
+                                    onChange={(e) => {
+                                        const value = parseFloat(e.target.value);
+                                        setVatRate(isNaN(value) ? '' : value);
+                                    }}
                                 />
                             </div>
                             <div>
@@ -107,8 +110,11 @@ const VATCalculator = () => {
                                         <input
                                             type="number"
                                             placeholder="0"
-                                            value={priceBeforeVAT}
-                                            onChange={(e) => setPriceBeforeVAT(parseFloat(e.target.value))}
+                                            value={priceBeforeVAT.toString()}
+                                            onChange={(e) => {
+                                                const value = parseFloat(e.target.value);
+                                                setPriceBeforeVAT(isNaN(value) ? '' : value);
+                                            }}
                                         />
                                     </motion.div>
                                 }
@@ -120,10 +126,13 @@ const VATCalculator = () => {
                                     >
                                         <p>Price with VAT:</p>
                                         <input
-                                          type="number"
-                                          placeholder="0"
-                                          value={priceWithVAT}
-                                          onChange={(e) => setPriceWithVAT(parseFloat(e.target.value))}
+                                            type="number"
+                                            placeholder="0"
+                                            value={priceWithVAT.toString()}
+                                            onChange={(e) => {
+                                                const value = parseFloat(e.target.value);
+                                                setPriceWithVAT(isNaN(value) ? '' : value);
+                                            }}
                                         />
                                     </motion.div>
                                 }

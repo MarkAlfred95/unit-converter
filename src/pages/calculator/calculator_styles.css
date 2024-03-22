@@ -913,6 +913,9 @@
         width: 20rem;
         height: 2.75rem;
     }
+    .calculator_nav_items{
+        font-size: 0.95em;
+    }
     .calc_item_container{
         flex-wrap: wrap;
         justify-content: center;
@@ -929,6 +932,15 @@
 }
 
 @media only screen and (max-width: 450px) {
+
+    /* HOME */
+    .calc_item_container{
+        width: 6rem;
+    }
+    .calc_item_name{
+        font-size: 0.75em;
+    }
+
     /* AGE CALCULATOR */
     .date_picker_container{
         width: 20rem;
@@ -941,6 +953,9 @@
     }
     .age_summary_result_wrap{
         gap: 0;
+    }
+    .age_years_subtext{
+        font-size: 1.3em;
     }
 
     /* AVERAGE CALCULATOR */
