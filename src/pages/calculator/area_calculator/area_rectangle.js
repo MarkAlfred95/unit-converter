@@ -3,6 +3,7 @@ import { useState } from "react";
 import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
+import useLengthConverter from "../../../hooks/useLengthConverter";
 
 const AreaRectangle = ({
     selectOptions,
@@ -30,16 +31,13 @@ const AreaRectangle = ({
     const handleUnitChangeRectW = (unit) => {
         setUnitValueRectW(unit);
     };
+
+
+    const convertedValue = useLengthConverter(inputValueRectW, unitValueRectW, unitValueRectL);
     const handleCalculateArea_Rectangle = () => {
-        let calculation = 0;
-        let result = "";
-        if (unitValueRectL === unitValueRectW){
-            calculation = inputValueRectL * inputValueRectW;
-            result = calculation + " square " + unitValueRectL;
-        }
-        else{
-            result = "Length conversion not yet available";
-        }
+        const calculation = inputValueRectL * convertedValue;
+        const result = calculation + " square " + unitValueRectL;
+         
         setResultTitle("Area of Rectangle");
         setCalculationResult(result);
 
@@ -47,7 +45,7 @@ const AreaRectangle = ({
             <>
                 <div className="result_text">Area of Rectangle Formula: <b>A = l × w</b></div>
                 <div className="result_text">A = l × w</div>
-                <div className="result_text">A = {inputValueRectL} × {inputValueRectW}</div>
+                <div className="result_text">A = {inputValueRectL} × {convertedValue}</div>
                 <div className="result_text">A = <b>{result}</b></div>
             </>
         );

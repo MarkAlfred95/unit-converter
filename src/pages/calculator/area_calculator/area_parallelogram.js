@@ -4,6 +4,8 @@ import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
 
+import useLengthConverter from "../../../hooks/useLengthConverter";
+
 const AreaParallelogram = ({
     selectOptions,
     modalOpen,
@@ -30,16 +32,12 @@ const AreaParallelogram = ({
     const handleUnitChangeParH = (unit) => {
         setUnitValueParH(unit);
     };
+
+    const convertedValue = useLengthConverter(inputValueParH, unitValueParH, unitValueParB);
     const handleCalculateArea_Parallelogram = () => {
-        let calculation = 0;
-        let result = "";
-        if (unitValueParB === unitValueParH){
-            calculation = inputValueParB * inputValueParH;
-            result = calculation + " square " + unitValueParB;
-        }
-        else{
-            result = "Length conversion not yet available";
-        }
+        const calculation = inputValueParB * convertedValue;
+        const result = calculation + " square " + unitValueParB;
+
         setResultTitle("Area of Parallelogram");
         setCalculationResult(result);
 
@@ -47,7 +45,7 @@ const AreaParallelogram = ({
             <>
                 <div className="result_text">Area of Parallelogram Formula: <b>A = b × h</b></div>
                 <div className="result_text">A = b × h</div>
-                <div className="result_text">A = {inputValueParB} × {inputValueParH}</div>
+                <div className="result_text">A = {inputValueParB} × {convertedValue}</div>
                 <div className="result_text">A = <b>{result}</b></div>
             </>
         );

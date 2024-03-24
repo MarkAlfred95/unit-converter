@@ -11,12 +11,13 @@ import {
 
 import cake_icon from "../../assets/cake_icon.svg";
 
-const DatePicker = ({value, onChange }) => {
-    const formattedValue = format(value, "yyyy-MM-dd");
+const DatePicker = ({ value, onChange }) => {
+    const formattedValue = value ? format(value, "yyyy-MM-dd") : "";
   
     const handleChange = (event) => {
-      const date = new Date(event.target.value);
-      onChange(date);
+        const inputValue = event.target.value;
+        const date = inputValue ? new Date(inputValue) : new Date("2010-01-01");
+        onChange(date);
     };
   
     return (
@@ -28,6 +29,7 @@ const DatePicker = ({value, onChange }) => {
         />
     );
 };
+
 
 const AgeCalculator = () => {
 
@@ -86,7 +88,9 @@ const AgeCalculator = () => {
         nextBDays = initNextBday;
     }
 
-    if (nextBirthdayMonth <= 0 || (targetDate.getMonth() === birthDate.getMonth())){
+
+    let dateNotZero = targetDate.getMonth() === birthDate.getMonth() - 1;
+    if ((nextBirthdayMonth <= 0 && !dateNotZero) || (targetDate.getMonth() === birthDate.getMonth())){
         nextBirthdayMonth += 11;
     }
 
