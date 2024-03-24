@@ -4,6 +4,8 @@ import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
 
+import useLengthConverter from "../../../hooks/useLengthConverter";
+
 const AreaTriangle = ({
     selectOptions,
     modalOpen,
@@ -38,23 +40,18 @@ const AreaTriangle = ({
     const handleUnitChangeSideC = (unit) => {
         setUnitValueSideC(unit);
     };
+
+    const convertedValueSideB = useLengthConverter(inputValueSideB, unitValueSideB, unitValueSideA);
+    const convertedValueSideC = useLengthConverter(inputValueSideC, unitValueSideC, unitValueSideA);
     const handleCalculateArea_Triangle = () => {
-        let calculation = 0;
-        let result = "";
         const a = parseFloat(inputValueSideA);
-        const b = parseFloat(inputValueSideB);
-        const c = parseFloat(inputValueSideC);
-        let s = 0;
-        let r = 0;
-        if (unitValueSideA === unitValueSideB && unitValueSideB === unitValueSideC){
-            s = (a + b + c) / 2;
-            r = s * (s - a) * (s - b) * (s - c);
-            calculation = Math.sqrt(r);
-            result = calculation + " square " + unitValueSideA;
-        }
-        else{
-            result = "Length conversion not yet available";
-        }
+        const b = parseFloat(convertedValueSideB);
+        const c = parseFloat(convertedValueSideC);
+        const s = (a + b + c) / 2;
+        const r = s * (s - a) * (s - b) * (s - c);
+        const calculation = Math.sqrt(r);
+        const result = calculation + " square " + unitValueSideA;
+
         setResultTitle("Area of Triangle");
         setCalculationResult(result);
         

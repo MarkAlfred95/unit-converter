@@ -4,6 +4,8 @@ import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
 
+import useLengthConverter from "../../../hooks/useLengthConverter";
+
 const AreaTrapezoid = ({
     selectOptions,
     modalOpen,
@@ -38,18 +40,14 @@ const AreaTrapezoid = ({
     const handleUnitChangeTraH = (unit) => {
         setUnitValueTraH(unit);
     };
+
+    const convertedValueTraB = useLengthConverter(inputValueTraB, unitValueTraB, unitValueTraA);
+    const convertedValueTraH = useLengthConverter(inputValueTraH, unitValueTraH, unitValueTraA);
     const handleCalculateArea_Trapezoid = () => {
-        let calculation = 0;
-        let result = "";
         const a = parseFloat(inputValueTraA);
-        const b = parseFloat(inputValueTraB);
-        if (unitValueTraA === unitValueTraB && unitValueTraB === unitValueTraH){
-            calculation = ((a + b) / 2) * inputValueTraH;
-            result = calculation + " square " + unitValueTraA;
-        }
-        else{
-            result = "Length conversion not yet available";
-        }
+        const b = parseFloat(convertedValueTraB);
+        const calculation = ((a + b) / 2) * convertedValueTraH;
+        const result = calculation + " square " + unitValueTraA;
         setResultTitle("Area of Trapezoid");
         setCalculationResult(result);
         
@@ -57,9 +55,9 @@ const AreaTrapezoid = ({
             <>
                 <div className="result_text">Area of Trapezoid Formula: <b>A = [(b1 + b2) ÷ 2] × h</b></div>
                 <div className="result_text">A = [(b1 + b2) ÷ 2] × h</div>
-                <div className="result_text">A = [({inputValueTraA} + {inputValueTraB}) ÷ 2] × {inputValueTraH}</div>
-                <div className="result_text">A = ({a + b} ÷ 2) × {inputValueTraH}</div>
-                <div className="result_text">A = {(a + b) / 2} × {inputValueTraH}</div>
+                <div className="result_text">A = [({inputValueTraA} + {convertedValueTraB}) ÷ 2] × {convertedValueTraH}</div>
+                <div className="result_text">A = ({a + b} ÷ 2) × {convertedValueTraH}</div>
+                <div className="result_text">A = {(a + b) / 2} × {convertedValueTraH}</div>
                 <div className="result_text">A = <b>{result}</b></div>
             </>
         );

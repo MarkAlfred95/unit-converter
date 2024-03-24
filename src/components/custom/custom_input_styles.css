@@ -241,8 +241,8 @@
     .calc_category_input_wrap input{
         width: 10rem;
     }
-    .calc_category_label-b{
-        width: calc(7rem + 4px);
+    .calc_category_label{
+        width: calc(10.5rem + 2px);
     }
 }
 

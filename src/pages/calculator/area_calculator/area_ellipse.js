@@ -4,6 +4,8 @@ import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
 
+import useLengthConverter from "../../../hooks/useLengthConverter";
+
 const AreaEllipse = ({
     pi,
     selectOptions,
@@ -31,16 +33,12 @@ const AreaEllipse = ({
     const handleUnitChangeEllB = (unit) => {
         setUnitValueEllB(unit);
     };
+
+    const convertedValue = useLengthConverter(inputValueEllB, unitValueEllB, unitValueEllA);
     const handleCalculateArea_Ellipse = () => {
-        let calculation = 0;
-        let result = "";
-        if (unitValueEllA === unitValueEllB){
-            calculation = (pi * (inputValueEllA * inputValueEllB)).toFixed(6);
-            result = calculation + " square " + unitValueEllA;
-        }
-        else{
-            result = "Length conversion not yet available";
-        }
+        const calculation = (pi * (inputValueEllA * convertedValue)).toFixed(6);
+        const result = calculation + " square " + unitValueEllA;
+        
         setResultTitle("Area of Ellipse");
         setCalculationResult(result);
 
@@ -48,8 +46,8 @@ const AreaEllipse = ({
             <>
                 <div className="result_text">Area of Ellipse Formula: <b>A = πab</b></div>
                 <div className="result_text">A = πab</div>
-                <div className="result_text">A = π × {inputValueEllA} × {inputValueEllB}</div>
-                <div className="result_text">A = {inputValueEllA * inputValueEllB}π</div>
+                <div className="result_text">A = π × {inputValueEllA} × {convertedValue}</div>
+                <div className="result_text">A = {inputValueEllA * convertedValue}π</div>
                 <div className="result_text">A = <b>{result}</b></div>
             </>
         );
