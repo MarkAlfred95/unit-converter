@@ -12,7 +12,7 @@ import discount_calc_icon from '../assets/discount_calc_icon.png'
 import investment_calc_icon from '../assets/investment_calc_icon.png'
 import percent_calc_icon from '../assets/percent_calc_icon.png'
 import salary_calc_icon from '../assets/salary_calc_icon.png'
-// import time_calc_icon from '../assets/time_calc_icon.png'
+import time_calc_icon from '../assets/time_calc_icon.png'
 import vat_calc_icon from '../assets/vat_calc_icon.png'
 // import volume_calc_icon from '../assets/volume_calc_icon.png'
 import arrow from '../assets/arrow_back.svg'
@@ -37,7 +37,7 @@ const CalculatorLayout = () => {
         { icons: investment_calc_icon, calc_name: "Investment", link: "investment-calculator", type: "Calculator"},
         { icons: percent_calc_icon, calc_name: "Percentage", link: "percentage-calculator", type: "Calculator"},
         { icons: salary_calc_icon, calc_name: "Salary", link: "salary-calculator", type: "Calculator"},
-        // { icons: time_calc_icon, calc_name: "Time", link: "time-calculator", type: "Calculator"},
+        { icons: time_calc_icon, calc_name: "Time", link: "time-calculator", type: "Calculator"},
         { icons: vat_calc_icon, calc_name: "VAT", link: "vat-calculator", type: "Calculator"},
         // { icons: volume_calc_icon, calc_name: "Volume", link: "volume-calculator", type: "Calculator"},
         { icons: currency_convert_icon, calc_name: "Currency", link: "currency-converter", type: "Converter"},
@@ -139,7 +139,7 @@ const CalculatorLayout = () => {
                                     }}
                                 >
                                     <h1>Calculators</h1>
-                                    <div className="calculator_nav-side">
+                                    <div className="calculator_nav-side" style={{ width: "16rem"}}>
                                         <div
                                             className={`calculator_nav_items-side ${activeItem === 'All' ? 'calc_nav_active-side' : ''}`}
                                             onClick={() => handleItemClick('All')}

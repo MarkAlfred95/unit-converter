@@ -110,26 +110,25 @@
 }
 
 .calculator_nav{
+    padding: 0.25rem;
     margin: 1rem 0 3rem 0;
-    width: 24rem;
-    height: 3rem;
     background: white;
     border: 3px solid var(--dark-color);
     border-radius: 10px;
     filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
     display: flex;
     justify-content: space-between;
-    transform-origin: top;
-    position: relative;
+    align-items: center;
+    gap: 0.25rem;
 }
 .calculator_nav_items{
-    width: 40%;
-    height: 100%;
+    all: unset;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
     color: var(--dark-color);
     font-size: 1.2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-content: center;
     cursor: pointer;
     transition: all 200ms ease;
 }
@@ -137,7 +136,7 @@
     width: 20%;
 }
 .calc_nav_active{
-    height: 100%;
+    /* height: calc(100% - 0.5rem); */
     background: var(--dark-color);
     color: white;
 }
@@ -513,18 +512,19 @@
 
 /* BMI CALCULATOR */
 .bmi_unit_system_select{
+    padding: 0.25rem;
     margin-bottom: 1rem;
-    /* width: 15rem; */
-    /* padding: 0 2rem; */
     border: 2px solid var(--dark-color);
     border-radius: 0.5rem;
     display: flex;
     overflow: hidden;
+    gap: 0.25rem;
 }
 .bmi_unit_system_select button{
     all: unset;
     padding: 0.5rem 1.5rem;
     width: 50%;
+    border-radius: 0.25rem;
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
@@ -895,6 +895,46 @@
 }
 
 
+/* TIME CALCULATOR */
+.time_calc_inputs_wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.time_calc_input_wrap p{
+    margin: 0;
+    font-weight: 600;
+}
+.time_calc_input_wrap input{
+    padding: 0.5rem;
+    width: 5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    font-family: "Poppins";
+}
+.time_calc_radiobtns{
+    display: flex;
+    gap: 1rem;
+}
+.time_calc_radiobtn{
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+.time_calc_radiobtn button{
+    all: unset;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+}
+
+
 @media only screen and (max-width: 1150px) {
 
     /* AREA CALCULATOR */
@@ -982,5 +1022,11 @@
     /* SALARY CALCULATOR */
     .salary_table{
         width: 20rem;
+    }
+
+    /* TIME CALCULATOR */
+    .time_calc_input_wrap input{
+        padding: 0.25rem;
+        width: 4rem;
     }
 }
