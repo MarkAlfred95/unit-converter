@@ -25,6 +25,7 @@ import PercentageCalculator from './pages/calculator/percentage_calculator';
 import SalaryCalculator from './pages/calculator/salary_calculator';
 import SpeedConverter from './pages/converter/speed_converter';
 import TemperatureConverter from './pages/converter/temperature_converter';
+import TimeCalculator from './pages/calculator/time_calculator';
 import TimeConverter from './pages/converter/time_converter';
 import VATCalculator from './pages/calculator/vat_calculator';
 import VolumeConverter from './pages/converter/volume_converter';
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
         <Route path="salary-calculator" element={<SalaryCalculator />} />
         <Route path="speed-converter" element={<SpeedConverter />} />
         <Route path="temperature-converter" element={<TemperatureConverter />} />
+        <Route path="time-calculator" element={<TimeCalculator />} />
         <Route path="time-converter" element={<TimeConverter />} />
         <Route path="vat-calculator" element={<VATCalculator />} />
         <Route path="volume-converter" element={<VolumeConverter />} />

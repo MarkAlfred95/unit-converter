@@ -11,7 +11,7 @@ import discount_calc_icon from '../../assets/discount_calc_icon.png'
 import investment_calc_icon from '../../assets/investment_calc_icon.png'
 import percent_calc_icon from '../../assets/percent_calc_icon.png'
 import salary_calc_icon from '../../assets/salary_calc_icon.png'
-// import time_calc_icon from '../../assets/time_calc_icon.png'
+import time_calc_icon from '../../assets/time_calc_icon.png'
 import vat_calc_icon from '../../assets/vat_calc_icon.png'
 // import volume_calc_icon from '../../assets/volume_calc_icon.png'
 
@@ -37,7 +37,7 @@ const Calculators = () => {
     { icons: investment_calc_icon, calc_name: "Investment", link: "calculator/investment-calculator", type: "Calculator"},
     { icons: percent_calc_icon, calc_name: "Percentage", link: "calculator/percentage-calculator", type: "Calculator"},
     { icons: salary_calc_icon, calc_name: "Salary", link: "calculator/salary-calculator", type: "Calculator"},
-    // { icons: time_calc_icon, calc_name: "Time", link: "calculator/time-calculator", type: "Calculator"},
+    { icons: time_calc_icon, calc_name: "Time", link: "calculator/time-calculator", type: "Calculator"},
     { icons: vat_calc_icon, calc_name: "VAT", link: "calculator/vat-calculator", type: "Calculator"},
     // { icons: volume_calc_icon, calc_name: "Volume", link: "calculator/volume-calculator", type: "Calculator"},
     { icons: currency_convert_icon, calc_name: "Currency", link: "calculator/currency-converter", type: "Converter"},
@@ -70,24 +70,24 @@ const Calculators = () => {
           <h1>Online Calculators</h1>
 
           <div className="calculator_nav">
-            <div
+            <button
               className={`calculator_nav_items ${activeItem === 'All' ? 'calc_nav_active' : ''}`}
               onClick={() => handleItemClick('All')}
             >
               All
-            </div>
-            <div
+            </button>
+            <button
               className={`calculator_nav_items ${activeItem === 'Calculator' ? 'calc_nav_active' : ''}`}
               onClick={() => handleItemClick('Calculator')}
             >
               Calculators
-            </div>
-            <div
+            </button>
+            <button
               className={`calculator_nav_items ${activeItem === 'Converter' ? 'calc_nav_active' : ''}`}
               onClick={() => handleItemClick('Converter')}
             >
               Converters
-            </div>
+            </button>
           </div>
 
           <div className="calc_items_wrap">
