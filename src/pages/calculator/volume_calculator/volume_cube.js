@@ -3,8 +3,9 @@ import { useState } from "react";
 import CustomInput from "../../../components/custom/custom_input";
 import CustomBtnCalculate from "../../../components/custom/custom_btn_calculate";
 import CustomBtnClear from "../../../components/custom/custom_btn_clear";
+import volume_figure from "../../../assets/volume_figure_cube.png";
 
-const AreaSquare = ({
+const VolumeCube = ({
     selectOptions,
     modalOpen,
     open,
@@ -24,18 +25,18 @@ const AreaSquare = ({
         setUnitValue(unit);
     };
 
-    const handleCalculateArea_Square = () => {
-        let calculation = inputValue * inputValue;
-        let result = calculation + " square " + unitValue;
-        setResultTitle("Area of Square");
+    const handleCalculateVolume_Cube = () => {
+        let calculation = inputValue * inputValue * inputValue;
+        let result = calculation + " cubic " + unitValue;
+        setResultTitle("Volume of Cube");
         setCalculationResult(result);
 
         const solutionJSX = (
             <>
-                <div className="result_text">Area of Square Formula: <b>A = a²</b></div>
-                <div className="result_text">A = a²</div>
-                <div className="result_text">A = {inputValue}²</div>
-                <div className="result_text">A = <b>{result}</b></div>
+                <div className="result_text">Volume of Cube Formula: <b>V = a³</b></div>
+                <div className="result_text">V = a³</div>
+                <div className="result_text">V = {inputValue}³</div>
+                <div className="result_text">V = <b>{result}</b></div>
             </>
         );
         setSolution(solutionJSX);
@@ -55,10 +56,15 @@ const AreaSquare = ({
 
     return (
         <div className="calc_category_container">
-            <div className="calc_category_title">Square</div>
+            <div className="calc_category_title">Cube</div>
             <div className="calc_category_content_wrap">
                 <div className="shape_wrap">
-                    <div className="square"></div>
+                    <img
+                        loading="lazy"
+                        style={{ width: "10rem" }}
+                        src={volume_figure}
+                        alt="cube volume" 
+                    />
                 </div>
                 <div className="input_wrap">
                     <CustomInput
@@ -74,7 +80,7 @@ const AreaSquare = ({
                 </div>
                 <div className="calc_category_btns">
                     <CustomBtnCalculate 
-                        calculate={handleCalculateArea_Square}
+                        calculate={handleCalculateVolume_Cube}
                     />
                     <CustomBtnClear 
                         clear={handleClear}
@@ -85,4 +91,4 @@ const AreaSquare = ({
     )
 }
 
-export default AreaSquare;
+export default VolumeCube;

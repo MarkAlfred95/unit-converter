@@ -28,6 +28,7 @@ import TemperatureConverter from './pages/converter/temperature_converter';
 import TimeCalculator from './pages/calculator/time_calculator';
 import TimeConverter from './pages/converter/time_converter';
 import VATCalculator from './pages/calculator/vat_calculator';
+import VolumeCalculator from './pages/calculator/volume_calculator/volume_calculator';
 import VolumeConverter from './pages/converter/volume_converter';
 
 // layouts
@@ -60,6 +61,7 @@ const router = createBrowserRouter(
         <Route path="time-calculator" element={<TimeCalculator />} />
         <Route path="time-converter" element={<TimeConverter />} />
         <Route path="vat-calculator" element={<VATCalculator />} />
+        <Route path="volume-calculator" element={<VolumeCalculator />} />
         <Route path="volume-converter" element={<VolumeConverter />} />
       </Route>
 

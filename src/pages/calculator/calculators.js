@@ -13,7 +13,7 @@ import percent_calc_icon from '../../assets/percent_calc_icon.png'
 import salary_calc_icon from '../../assets/salary_calc_icon.png'
 import time_calc_icon from '../../assets/time_calc_icon.png'
 import vat_calc_icon from '../../assets/vat_calc_icon.png'
-// import volume_calc_icon from '../../assets/volume_calc_icon.png'
+import volume_calc_icon from '../../assets/volume_calc_icon.png'
 
 import currency_convert_icon from '../../assets/currency_convert_icon.png'
 import data_convert_icon from '../../assets/data_convert_icon.png'
@@ -39,7 +39,7 @@ const Calculators = () => {
     { icons: salary_calc_icon, calc_name: "Salary", link: "calculator/salary-calculator", type: "Calculator"},
     { icons: time_calc_icon, calc_name: "Time", link: "calculator/time-calculator", type: "Calculator"},
     { icons: vat_calc_icon, calc_name: "VAT", link: "calculator/vat-calculator", type: "Calculator"},
-    // { icons: volume_calc_icon, calc_name: "Volume", link: "calculator/volume-calculator", type: "Calculator"},
+    { icons: volume_calc_icon, calc_name: "Volume", link: "calculator/volume-calculator", type: "Calculator"},
     { icons: currency_convert_icon, calc_name: "Currency", link: "calculator/currency-converter", type: "Converter"},
     { icons: data_convert_icon, calc_name: "Data", link: "calculator/data-converter", type: "Converter"},
     { icons: length_convert_icon, calc_name: "Length", link: "calculator/length-converter", type: "Converter"},

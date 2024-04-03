@@ -2,6 +2,8 @@ import { NavLink, Outlet } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import './layout_styles.css'
 
+import arrow from '../assets/arrow_back.svg'
+
 import age_calc_icon from '../assets/age_calc_icon.png'
 import area_calc_icon from '../assets/area_calc_icon.png'
 import average_calc_icon from '../assets/average_calc_icon.png'
@@ -14,8 +16,7 @@ import percent_calc_icon from '../assets/percent_calc_icon.png'
 import salary_calc_icon from '../assets/salary_calc_icon.png'
 import time_calc_icon from '../assets/time_calc_icon.png'
 import vat_calc_icon from '../assets/vat_calc_icon.png'
-// import volume_calc_icon from '../assets/volume_calc_icon.png'
-import arrow from '../assets/arrow_back.svg'
+import volume_calc_icon from '../assets/volume_calc_icon.png'
 
 import data_convert_icon from '../assets/data_convert_icon.png'
 import length_convert_icon from '../assets/length_convert_icon.png'
@@ -39,7 +40,7 @@ const CalculatorLayout = () => {
         { icons: salary_calc_icon, calc_name: "Salary", link: "salary-calculator", type: "Calculator"},
         { icons: time_calc_icon, calc_name: "Time", link: "time-calculator", type: "Calculator"},
         { icons: vat_calc_icon, calc_name: "VAT", link: "vat-calculator", type: "Calculator"},
-        // { icons: volume_calc_icon, calc_name: "Volume", link: "volume-calculator", type: "Calculator"},
+        { icons: volume_calc_icon, calc_name: "Volume", link: "volume-calculator", type: "Calculator"},
         { icons: currency_convert_icon, calc_name: "Currency", link: "currency-converter", type: "Converter"},
         { icons: data_convert_icon, calc_name: "Data", link: "data-converter", type: "Converter"},
         { icons: length_convert_icon, calc_name: "Length", link: "length-converter", type: "Converter"},

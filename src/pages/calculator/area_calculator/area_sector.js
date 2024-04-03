@@ -45,9 +45,9 @@ const AreaSector = ({
         
         const solutionJSX = (
             <>
-                <div className="result_text">Area of Sector Formula: <b>A = (θ ÷ 360) × π × r^2</b></div>
-                <div className="result_text">A = (θ ÷ 360 {unitValueDeg}) × π × r^2</div>
-                <div className="result_text">A = ({inputValueDeg} ÷ 360) × π × {inputValueRad}^2</div>
+                <div className="result_text">Area of Sector Formula: <b>A = (θ ÷ 360) × π × r²</b></div>
+                <div className="result_text">A = (θ ÷ 360 {unitValueDeg}) × π × r²</div>
+                <div className="result_text">A = ({inputValueDeg} ÷ 360) × π × {inputValueRad}²</div>
                 <div className="result_text">A = {preCalculation}π</div>
                 <div className="result_text">A = <b>{result}</b></div>
             </>
