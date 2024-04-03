@@ -4,16 +4,14 @@ import "../calculator_styles.css"
 
 // components
 import ResultModal from "../../../components/custom/result_modal";
-import AreaSquare from "./area_square";
-import AreaCircle from "./area_circle";
-import AreaRectangle from "./area_rectangle";
-import AreaParallelogram from "./area_parallelogram";
-import AreaTrapezoid from "./area_trapezoid";
-import AreaEllipse from "./area_ellipse";
-import AreaTriangle from "./area_triangle";
-import AreaSector from "./area_sector";
+import VolumeCube from "./volume_cube";
+import VolumeSphere from "./volume_sphere";
+import VolumeCone from "./volume_cone";
+import VolumeCylinder from "./volume_cylinder";
+import VolumeRectangularBox from "./volume_rectangular_box";
+import VolumeEllipsoid from "./volume_ellipsoid";
 
-const AreaCalculator = () => {
+const VolumeCalculator = () => {
 
     const pi = Math.PI;
 
@@ -41,16 +39,16 @@ const AreaCalculator = () => {
             <div className="pages_wrap">
                 <div className="pages_container">
                     <div className="pages_description_wrap">
-                        <h1>Area Calculator</h1>
+                        <h1>Volume Calculator</h1>
                         <p>
-                            An Area Calculator is designed to compute the amount of space
-                            enclosed within a two-dimensional shape. It is commonly used in fields such as architecture,
-                            engineering, construction, and mathematics to quickly determine the surface area of various
-                            shapes like squares, rectangles, triangles, circles, and other polygons.
+                            A Volume Calculator is a practical tool or application designed to compute the volume 
+                            of various three-dimensional shapes and objects. It enables users to determine the 
+                            amount of space enclosed by shapes such as cubes, spheres, cylinders, cones, and 
+                            etc. by inputting relevant dimensions such as length, width, and height. 
                         </p>
                     </div>
                     <div className="calc_categories_wrap">
-                        <AreaSquare 
+                        <VolumeCube 
                             selectOptions = {selectOptions}
                             modalOpen = {modalOpen}
                             open = {open}
@@ -59,7 +57,7 @@ const AreaCalculator = () => {
                             setCalculationResult = {setCalculationResult}
                             setSolution = {setSolution}
                         />
-                        <AreaCircle 
+                        <VolumeSphere 
                             pi = {pi}
                             selectOptions = {selectOptions}
                             modalOpen = {modalOpen}
@@ -69,7 +67,18 @@ const AreaCalculator = () => {
                             setCalculationResult = {setCalculationResult}
                             setSolution = {setSolution}
                         />
-                        <AreaRectangle 
+                        <VolumeCone
+                            pi = {pi} 
+                            selectOptions = {selectOptions}
+                            modalOpen = {modalOpen}
+                            open = {open}
+                            close = {close}
+                            setResultTitle = {setResultTitle}
+                            setCalculationResult = {setCalculationResult}
+                            setSolution = {setSolution}
+                        /> 
+                        <VolumeCylinder
+                            pi = {pi} 
                             selectOptions = {selectOptions}
                             modalOpen = {modalOpen}
                             open = {open}
@@ -78,16 +87,7 @@ const AreaCalculator = () => {
                             setCalculationResult = {setCalculationResult}
                             setSolution = {setSolution}
                         />
-                        <AreaParallelogram 
-                            selectOptions = {selectOptions}
-                            modalOpen = {modalOpen}
-                            open = {open}
-                            close = {close}
-                            setResultTitle = {setResultTitle}
-                            setCalculationResult = {setCalculationResult}
-                            setSolution = {setSolution}
-                        />                        
-                        <AreaTriangle 
+                        <VolumeRectangularBox 
                             selectOptions = {selectOptions}
                             modalOpen = {modalOpen}
                             open = {open}
@@ -96,16 +96,7 @@ const AreaCalculator = () => {
                             setCalculationResult = {setCalculationResult}
                             setSolution = {setSolution}
                         />
-                        <AreaTrapezoid 
-                            selectOptions = {selectOptions}
-                            modalOpen = {modalOpen}
-                            open = {open}
-                            close = {close}
-                            setResultTitle = {setResultTitle}
-                            setCalculationResult = {setCalculationResult}
-                            setSolution = {setSolution}
-                        />
-                        <AreaEllipse 
+                        <VolumeEllipsoid
                             pi = {pi}
                             selectOptions = {selectOptions}
                             modalOpen = {modalOpen}
@@ -114,18 +105,7 @@ const AreaCalculator = () => {
                             setResultTitle = {setResultTitle}
                             setCalculationResult = {setCalculationResult}
                             setSolution = {setSolution}
-                        />
-                        <AreaSector
-                            pi = {pi}
-                            selectOptions = {selectOptions}
-                            modalOpen = {modalOpen}
-                            open = {open}
-                            close = {close}
-                            setResultTitle = {setResultTitle}
-                            setCalculationResult = {setCalculationResult}
-                            setSolution = {setSolution}
-                        />
-
+                        /> 
                     </div>
                 </div>
             </div>
@@ -141,7 +121,7 @@ const AreaCalculator = () => {
                         calculationResult={calculationResult}
                         solution={solution}
                         handleClose={close}
-                        variant="area"
+                        variant="volume"
                     />
                 }
             </AnimatePresence>
@@ -149,4 +129,4 @@ const AreaCalculator = () => {
     );
 };
 
-export default AreaCalculator;
+export default VolumeCalculator;
