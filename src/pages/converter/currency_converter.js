@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "./converter_styles.css"
 import ScrollToTop from "../../components/scrolltotop";
 
-const api_key = "91ccf9768c9610a6413a38e9";
+const api_key = "replace-with-my-api-key";
 
 const currencyOptions = [
     { currency: "USD", currency_name: "United States Dollar" },
