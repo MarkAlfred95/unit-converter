@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import CustomButton from '../../components/custom/custom_button';
 import CustomBtnClear from '../../components/custom/custom_btn_clear';
+import ScrollToTop from '../../components/scrolltotop';
 
 const VATCalculator = () => {
     const [isVAT, setIsVAT] = useState(true);
@@ -51,10 +52,12 @@ const VATCalculator = () => {
         setInclusivePrice(0);
         setExclusivePrice(0);
         setVATAmount(0);
+        setVATAmountEx(0);
     }
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">

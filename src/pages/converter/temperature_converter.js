@@ -8,6 +8,7 @@ import convert_icon from "../../assets/swap_horiz.svg"
 import CustomSelect from "../../components/custom/custom_select"
 import CustomBtnClear from "../../components/custom/custom_btn_clear"
 import CustomBtnCopy from "../../components/custom/custom_btn_copy"
+import ScrollToTop from "../../components/scrolltotop";
 
 const TemperatureConverter = () => {
 
@@ -97,6 +98,7 @@ const TemperatureConverter = () => {
 
     return (
     <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">

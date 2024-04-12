@@ -12,6 +12,7 @@ import AreaTrapezoid from "./area_trapezoid";
 import AreaEllipse from "./area_ellipse";
 import AreaTriangle from "./area_triangle";
 import AreaSector from "./area_sector";
+import ScrollToTop from "../../../components/scrolltotop";
 
 const AreaCalculator = () => {
 
@@ -38,6 +39,7 @@ const AreaCalculator = () => {
 
     return (
         <>
+            <ScrollToTop />
             <div className="pages_wrap">
                 <div className="pages_container">
                     <div className="pages_description_wrap">

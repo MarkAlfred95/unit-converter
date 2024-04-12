@@ -2,6 +2,7 @@ import { useState } from "react"
 import { motion } from "framer-motion";
 
 import "./converter_styles.css"
+import ScrollToTop from "../../components/scrolltotop";
 
 const api_key = "91ccf9768c9610a6413a38e9";
 
@@ -187,6 +188,7 @@ const CurrencyConverter = () => {
 
     return (
     <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">

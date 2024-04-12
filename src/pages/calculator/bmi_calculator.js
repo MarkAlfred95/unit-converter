@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import CustomButton from "../../components/custom/custom_button";
 import CustomBtnClear from "../../components/custom/custom_btn_clear";
+import ScrollToTop from "../../components/scrolltotop";
 
 const BMIInput = ({
     unitLabel,
@@ -229,6 +230,7 @@ const BMICalculator = () => {
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">

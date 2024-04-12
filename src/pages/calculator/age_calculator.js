@@ -10,6 +10,7 @@ import {
 } from "date-fns";
 
 import cake_icon from "../../assets/cake_icon.svg";
+import ScrollToTop from "../../components/scrolltotop";
 
 const DatePicker = ({ value, onChange }) => {
     const formattedValue = value ? format(value, "yyyy-MM-dd") : "";
@@ -96,6 +97,7 @@ const AgeCalculator = () => {
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">
