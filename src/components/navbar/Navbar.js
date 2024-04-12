@@ -73,13 +73,13 @@ const Navbar = () => {
         }}
       >
         <div className="ham_menu_btn"></div>
-        <NavLink to="/" className="ham_nav_btn">
+        <NavLink to="/" className="ham_nav_btn" onClick={handleOpenHamMenu}>
           <span className="ham_nav_text">Home</span>
         </NavLink>
-        <NavLink to="about" className="ham_nav_btn">
+        <NavLink to="about" className="ham_nav_btn" onClick={handleOpenHamMenu}>
           <span className="ham_nav_text">About</span>
         </NavLink>
-        <NavLink to="calculator" className="ham_nav_btn">
+        <NavLink to="calculator" className="ham_nav_btn" onClick={handleOpenHamMenu}>
           <span className="ham_nav_text">Calculators</span>
         </NavLink>
       </div>

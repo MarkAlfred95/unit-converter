@@ -172,6 +172,7 @@ const CalculatorLayout = () => {
                                             to={calculator.link}
                                             key={index}
                                             className="calc_link-side"
+                                            onClick={() => setOpenMiniSidebar(!openMiniSidebar)}
                                         >
                                             <img
                                                 loading='lazy'
