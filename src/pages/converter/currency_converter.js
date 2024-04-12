@@ -4,8 +4,6 @@ import { motion } from "framer-motion";
 import "./converter_styles.css"
 import ScrollToTop from "../../components/scrolltotop";
 
-const api_key = "replace-with-my-api-key";
-
 const currencyOptions = [
     { currency: "USD", currency_name: "United States Dollar" },
     { currency: "EUR", currency_name: "Euro" },
@@ -176,7 +174,7 @@ const CurrencyConverter = () => {
     const [exchangeRate, setExchangeRate] = useState("1 USD = 0.92 EUR");
 
     const calculateExchangeRate = () => {
-        let url = `https://v6.exchangerate-api.com/v6/${api_key}/latest/${fromCurrency}`;
+        let url = `https://v6.exchangerate-api.com/v6/${process.env.REACT_APP_API_KEY}/latest/${fromCurrency}`;
         fetch(url).then(response => response.json()).then(result =>{
             let exchangeRate = result.conversion_rates[toCurrency];
             let totalExRate = (amount * exchangeRate).toFixed(2);
