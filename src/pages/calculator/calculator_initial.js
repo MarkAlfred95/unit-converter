@@ -9,6 +9,7 @@ import length_convert_icon from '../../assets/length_convert_icon.png'
 import mass_convert_icon from '../../assets/mass_convert_icon.png'
 import speed_convert_icon from '../../assets/speed_convert_icon.png'
 import temp_convert_icon from '../../assets/temp_convert_icon.png'
+import ScrollToTop from '../../components/scrolltotop'
 
 
 const CalculatorInitial = () => {
@@ -27,6 +28,7 @@ const CalculatorInitial = () => {
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">

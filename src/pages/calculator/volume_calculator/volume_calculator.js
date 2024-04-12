@@ -10,6 +10,7 @@ import VolumeCone from "./volume_cone";
 import VolumeCylinder from "./volume_cylinder";
 import VolumeRectangularBox from "./volume_rectangular_box";
 import VolumeEllipsoid from "./volume_ellipsoid";
+import ScrollToTop from "../../../components/scrolltotop";
 
 const VolumeCalculator = () => {
 
@@ -36,6 +37,7 @@ const VolumeCalculator = () => {
 
     return (
         <>
+            <ScrollToTop />
             <div className="pages_wrap">
                 <div className="pages_container">
                     <div className="pages_description_wrap">

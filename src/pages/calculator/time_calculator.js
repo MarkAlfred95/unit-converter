@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import CustomButton from '../../components/custom/custom_button';
 import CustomBtnClear from '../../components/custom/custom_btn_clear';
+import ScrollToTop from '../../components/scrolltotop';
 
 const TimeCalculator = () => {
     
@@ -115,6 +116,7 @@ const TimeCalculator = () => {
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">
@@ -127,7 +129,7 @@ const TimeCalculator = () => {
                     </p>
                 </div>
                 <div className="calc_container">
-                    <h1 style={{ marginBottom: "1rem", textAlign: "center" }}>Add or Subtract Time</h1>
+                    <h2 style={{ marginBottom: "1rem", textAlign: "center" }}>Add or Subtract Time</h2>
                     <div 
                         style={{
                             display: "flex",
@@ -325,7 +327,7 @@ const TimeCalculator = () => {
                 </div>
 
                 <div className="calc_container">
-                    <h1 style={{ marginBottom: "1rem", textAlign: "center" }}>Calculate Time in Expression</h1>
+                    <h2 style={{ marginBottom: "1rem", textAlign: "center" }}>Calculate Time in Expression</h2>
                     <div className="average_calc_wrap">
                         <div className="average_textarea_wrap">
                             <p style={{ marginTop: 0 }}>Add or subtract two or more time values in the form of an expression.

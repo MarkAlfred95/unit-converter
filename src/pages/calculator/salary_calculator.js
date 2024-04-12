@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import CustomButton from '../../components/custom/custom_button';
 import CustomBtnClear from '../../components/custom/custom_btn_clear';
+import ScrollToTop from '../../components/scrolltotop';
 
 const SalaryCalculator = () => {
     const [salaryType, setSalaryType] = useState("hourly");
@@ -187,124 +188,126 @@ const SalaryCalculator = () => {
     }
 
     return (
-        <div className="pages_wrap">
-            <div className="pages_container">
-                <div className="pages_description_wrap">
-                    <h1>Salary Calculator</h1>
-                    <p>
-                        A Salary Calculator is a practical tool used to estimate net pay or take-home salary 
-                        after deductions from gross income. It enables individuals to determine their expected 
-                        earnings based on factors such as hourly wages, annual salary, overtime hours, and 
-                        applicable deductions like taxes, insurance, and retirement contributions. 
-                    </p>
-                </div>
-
-                <div className="calc_container">
-                    <div className="discount_calc_wrap">
-                        <div className="discount_calc_inputs_wrap">
-                            <div className="salary_input_wrap">
-                                <p>Salary:</p>
-                                <input
-                                    type="number"
-                                    placeholder="0"
-                                    value={salary.toString()}
-                                    onChange={(e) => {
-                                        const value = parseFloat(e.target.value);
-                                        setSalary(isNaN(value) ? '' : value);
-                                    }}
-                                />
-                                <select value={salaryType} onChange={(e) => setSalaryType(e.target.value)}>
-                                    <option value="hourly">Hourly</option>
-                                    <option value="daily">Daily</option>
-                                    <option value="weekly">Weekly</option>
-                                    <option value="biweekly">Bi-Weekly</option>
-                                    <option value="monthly">Monthly</option>
-                                    <option value="quarterly">Quarterly</option>
-                                    <option value="yearly">Yearly</option>
-                                </select>
+        <>
+            <ScrollToTop />
+            <div className="pages_wrap">
+                <div className="pages_container">
+                    <div className="pages_description_wrap">
+                        <h1>Salary Calculator</h1>
+                        <p>
+                            A Salary Calculator is a practical tool used to estimate net pay or take-home salary
+                            after deductions from gross income. It enables individuals to determine their expected
+                            earnings based on factors such as hourly wages, annual salary, overtime hours, and
+                            applicable deductions like taxes, insurance, and retirement contributions.
+                        </p>
+                    </div>
+                    <div className="calc_container">
+                        <div className="discount_calc_wrap">
+                            <div className="discount_calc_inputs_wrap">
+                                <div className="salary_input_wrap">
+                                    <p>Salary:</p>
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        value={salary.toString()}
+                                        onChange={(e) => {
+                                            const value = parseFloat(e.target.value);
+                                            setSalary(isNaN(value) ? '' : value);
+                                        }}
+                                    />
+                                    <select value={salaryType} onChange={(e) => setSalaryType(e.target.value)}>
+                                        <option value="hourly">Hourly</option>
+                                        <option value="daily">Daily</option>
+                                        <option value="weekly">Weekly</option>
+                                        <option value="biweekly">Bi-Weekly</option>
+                                        <option value="monthly">Monthly</option>
+                                        <option value="quarterly">Quarterly</option>
+                                        <option value="yearly">Yearly</option>
+                                    </select>
+                                </div>
+                                <div className="discount_input_wrap">
+                                    <p>Hours per week:</p>
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        value={hoursPerWeek.toString()}
+                                        onChange={(e) => {
+                                            const value = parseFloat(e.target.value);
+                                            setHoursPerWeek(isNaN(value) ? '' : value)
+                                        }}
+                                    />
+                                </div>
+                                <div className="discount_input_wrap">
+                                    <p>Days per week:</p>
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        value={daysPerWeek.toString()}
+                                        onChange={(e) => {
+                                            const value = parseFloat(e.target.value);
+                                            setDaysPerWeek(isNaN(value) ? '' : value)
+                                        }}
+                                    />
+                                </div>
+                                <div className="discount_input_wrap">
+                                    <p>Holidays per year:</p>
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        value={holidaysPerYear.toString()}
+                                        onChange={(e) => {
+                                            const value = parseFloat(e.target.value);
+                                            setHolidaysPerYear(isNaN(value) ? '' : value);
+                                        }}
+                                    />
+                                </div>
+                                <div className="discount_input_wrap">
+                                    <p>Vacation days per year:</p>
+                                    <input
+                                        type="number"
+                                        placeholder="0"
+                                        value={vacationsPerYear.toString()}
+                                        onChange={(e) => {
+                                            const value = parseFloat(e.target.value);
+                                            setVacationsPerYear(isNaN(value) ? '' : value);
+                                        }}
+                                    />
+                                </div>
+                                <div className="bmi_btn_wrap">
+                                    <CustomButton
+                                        btn_name={"Calculate"}
+                                        click={calculateInvestment}
+                                    />
+                                    <CustomBtnClear
+                                        clear={handleClear}
+                                    />
+                                </div>
                             </div>
-                            <div className="discount_input_wrap">
-                                <p>Hours per week:</p>
-                                <input
-                                    type="number"
-                                    placeholder="0"
-                                    value={hoursPerWeek.toString()}
-                                    onChange={(e) => {
-                                        const value = parseFloat(e.target.value);
-                                        setHoursPerWeek(isNaN(value) ? '' : value)
-                                    }}
-                                />
+                            <div className="calc_table_wrap">
+                                <table className="salary_table">
+                                    <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>Unadjusted</th>
+                                            <th>Adjusted</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                      {salaryResult.map((row, index) => (
+                                        <tr key={index}>
+                                          <td>{row.result_name}</td>
+                                          <td>{row.result}</td>
+                                          <td>{row.adjusted}</td>
+                                        </tr>
+                                      ))}
+                                    </tbody>
+                                </table>
                             </div>
-                            <div className="discount_input_wrap">
-                                <p>Days per week:</p>
-                                <input
-                                    type="number"
-                                    placeholder="0"
-                                    value={daysPerWeek.toString()}
-                                    onChange={(e) => {
-                                        const value = parseFloat(e.target.value);
-                                        setDaysPerWeek(isNaN(value) ? '' : value)
-                                    }}
-                                />
-                            </div>
-                            <div className="discount_input_wrap">
-                                <p>Holidays per year:</p>
-                                <input
-                                    type="number"
-                                    placeholder="0"
-                                    value={holidaysPerYear.toString()}
-                                    onChange={(e) => {
-                                        const value = parseFloat(e.target.value);
-                                        setHolidaysPerYear(isNaN(value) ? '' : value);
-                                    }}
-                                />
-                            </div>
-                            <div className="discount_input_wrap">
-                                <p>Vacation days per year:</p>
-                                <input
-                                    type="number"
-                                    placeholder="0"
-                                    value={vacationsPerYear.toString()}
-                                    onChange={(e) => {
-                                        const value = parseFloat(e.target.value);
-                                        setVacationsPerYear(isNaN(value) ? '' : value);
-                                    }}
-                                />
-                            </div>
-                            <div className="bmi_btn_wrap">
-                                <CustomButton
-                                    btn_name={"Calculate"}
-                                    click={calculateInvestment}
-                                />
-                                <CustomBtnClear
-                                    clear={handleClear}
-                                />
-                            </div>
-                        </div>
-                        <div className="calc_table_wrap">
-                            <table className="salary_table">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Unadjusted</th>
-                                        <th>Adjusted</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  {salaryResult.map((row, index) => (
-                                    <tr key={index}>
-                                      <td>{row.result_name}</td>
-                                      <td>{row.result}</td>
-                                      <td>{row.adjusted}</td>
-                                    </tr>
-                                  ))}
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

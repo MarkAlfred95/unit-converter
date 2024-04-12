@@ -3,11 +3,13 @@ import Calculators from './calculator/calculators';
 import Footer from '../components/footer'
 
 import './pages_styles.css';
+import ScrollToTop from '../components/scrolltotop';
 
 
 const Home = () => {
     return (
         <>
+            <ScrollToTop />
             <Hero />
             {/* <div className="sized-box"></div> */}
             <div className="calculator_background">

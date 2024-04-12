@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import CustomButton from "../../components/custom/custom_button";
 import CustomBtnClear from "../../components/custom/custom_btn_clear";
 import CustomSelectSmall from "../../components/custom/custom_select_small";
+import ScrollToTop from "../../components/scrolltotop";
 
 const selectOptions = [
     {selectValue: "percentage_a", selectName: "What is X percent of Y?"},
@@ -167,6 +168,7 @@ const PercentageCalculator = () => {
 
     return (
         <>
+        <ScrollToTop />
         <div className="pages_wrap">
             <div className="pages_container">
                 <div className="pages_description_wrap">
