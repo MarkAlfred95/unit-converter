@@ -17,7 +17,7 @@ import AverageCalculator from './pages/calculator/average_calculator';
 import BMICalculator from './pages/calculator/bmi_calculator';
 import CurrencyConverter from './pages/converter/currency_converter';
 import DataConverter from './pages/converter/data_converter';
-// import DateCalculator from './pages/calculator/date_calculator';
+import DateCalculator from './pages/calculator/date_calculator';
 import DiscountCalculator from './pages/calculator/discount_calculator';
 import InvestmentCalculator from './pages/calculator/investment_calculator';
 import LengthConverter from './pages/converter/length_converter';
@@ -51,7 +51,7 @@ const router = createBrowserRouter(
         <Route path="bmi-calculator" element={<BMICalculator />} />
         <Route path="currency-converter" element={<CurrencyConverter />} />
         <Route path="data-converter" element={<DataConverter />} />
-        {/* <Route path="date-calculator" element={<DateCalculator />} /> */}
+        <Route path="date-calculator" element={<DateCalculator />} />
         <Route path="discount-calculator" element={<DiscountCalculator />} />
         <Route path="investment-calculator" element={<InvestmentCalculator />} />
         <Route path="length-converter" element={<LengthConverter />} />

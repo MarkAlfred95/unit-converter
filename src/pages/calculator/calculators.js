@@ -6,7 +6,7 @@ import area_calc_icon from '../../assets/area_calc_icon.png'
 import age_calc_icon from '../../assets/age_calc_icon.png'
 import average_calc_icon from '../../assets/average_calc_icon.png'
 import bmi_calc_icon from '../../assets/bmi_calc_icon.png'
-// import date_calc_icon from '../../assets/date_calc_icon.png'
+import date_calc_icon from '../../assets/date_calc_icon.png'
 import discount_calc_icon from '../../assets/discount_calc_icon.png'
 import investment_calc_icon from '../../assets/investment_calc_icon.png'
 import percent_calc_icon from '../../assets/percent_calc_icon.png'
@@ -32,7 +32,7 @@ const Calculators = () => {
     { icons: area_calc_icon, calc_name: "Area", link: "calculator/area-calculator", type: "Calculator"},
     { icons: average_calc_icon, calc_name: "Average", link: "calculator/average-calculator", type: "Calculator"},
     { icons: bmi_calc_icon, calc_name: "BMI", link: "calculator/bmi-calculator", type: "Calculator"},
-    // { icons: date_calc_icon, calc_name: "Date", link: "calculator/date-calculator", type: "Calculator"},
+    { icons: date_calc_icon, calc_name: "Date", link: "calculator/date-calculator", type: "Calculator"},
     { icons: discount_calc_icon, calc_name: "Discount", link: "calculator/discount-calculator", type: "Calculator"},
     { icons: investment_calc_icon, calc_name: "Investment", link: "calculator/investment-calculator", type: "Calculator"},
     { icons: percent_calc_icon, calc_name: "Percentage", link: "calculator/percentage-calculator", type: "Calculator"},
@@ -110,7 +110,6 @@ const Calculators = () => {
                     <span>{calculator.calc_name}
                       <span>{space}{calculator.type}</span>
                     </span>
-                    {/* <span>{calculator.type}</span> */}
                   </div>
                 </div>
               </NavLink>
